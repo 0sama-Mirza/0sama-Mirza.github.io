@@ -29,14 +29,14 @@
 						<!-- https://sadgrl.online/webmastery/downloads/tiledbgs -->
                         <ul>
 							<li style="list-style-image: url('../images/icons/Duck-TV.gif');"><p class="listhead" style="color: white;">For Downloading Seperate Chapters In A Video:</p>
-								<pre><code class="items">
+								<pre><code>
 yt-dlp --embed-metadata --split-chapters $URL
 OR:
 yt-dlp --embed-chapters --split-chapters $URL
 								</code></pre>
 							</li>
 							<li style="list-style-image: url('../images/icons/Windows-TV.gif');"><p class="listhead" style="color: white;">Best Download Speed(Needs aria2 and yt-dlp maybe):</p>
-								<pre><code class="items">
+								<pre><code>
 youtube-dl --external-downloader=aria2c 
 --external-downloader-args '--min-split-size=1M 
 --max-connection-per-server=16 
@@ -46,20 +46,20 @@ youtube-dl --external-downloader=aria2c
 							</li>
 
 							<li style="list-style-image: url('../images/icons/Small-Radio.gif');"><p class="listhead" style="color: white;">For Extracting audio.:</p>
-								<pre><code class="items">
+								<pre><code>
 youtube-dl --extract-audio --audio-format mp3 $URL
 								</code></pre>
 							</li>
 
 							<li style="list-style-image: url('../images/icons/Small-Laptop.gif');"><p class="listhead" style="color: white;">For Adding Thimbnail and Metadata.:</p>
-								<pre><code class="items">
+								<pre><code>
 yt-dlp --extract-audio --audio-format best --embed-thumbnail 
 --add-metadata $URL
 								</code></pre>
 							</li>
 
 							<li style="list-style-image: url('../images/icons/Duck-TV.gif');"><p class="listhead" style="color: white;">For extracting actual video url. The first one is the Video while the second one is the audio.:</p>
-								<pre><code class="items">
+								<pre><code>
 youtube-dl -g
 								</code></pre>
 							</li>
@@ -113,20 +113,22 @@ ffmpeg -i 1.webm -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" dsa.mp4
 				</section>
 				<section>
 					<h3 class="listhead">Interesting Stuff On The Internet</h3>
-					<ul>
-						<li><a class="menuitem" href="https://bugswriter.com/">BugsWriter</a></li>
-						<li><a class="menuitem" href="https://sadgrl.online/">SadGrl</a></li>
-						<li><a class="menuitem" href="https://links.yesterweb.org/">When The Internet Felt Exciting And Mysterious</a></li>
-						<li><a class="menuitem" href="https://adam.omg.lol/">OMG LOL</a></li>
-						<li><a class="menuitem" href="http://txti.es/">Simple Website Builder</a></li>
-						<li><a class="menuitem" href="https://wiby.me/">Better Google</a></li>
-						<li><a class="menuitem" href="https://asnan111.github.io/CAED-Lab-1/Asnan.html">The Best Website On This Planet!</a></li>
-						<li><a class="menuitem" href="https://www.anothersadtrombone.com/?gdpr=1">Click Here If You Accomplished Something Great!</a></li>
-						<li><a class="menuitem" href="https://www.szynalski.com/tone-generator/">Cool Wave Sounds</a></li>
-						<li><a class="menuitem" href="https://www.boredbutton.com/">Are You Bored? Click Here!</a></li>
-						<li><a class="menuitem" href="https://billsworld.neocities.org/">Time Travel To 1999!</a></li>
-						<li><a class="menuitem" href="https://pixels.crd.co/">Pixels</a></li>
-					</ul>
+					<nav>
+						<ul>
+							<li><a class="menuitem" href="https://bugswriter.com/">BugsWriter</a></li>
+							<li><a class="menuitem" href="https://sadgrl.online/">SadGrl</a></li>
+							<li><a class="menuitem" href="https://links.yesterweb.org/">When The Internet Felt Exciting And Mysterious</a></li>
+							<li><a class="menuitem" href="https://adam.omg.lol/">OMG LOL</a></li>
+							<li><a class="menuitem" href="http://txti.es/">Simple Website Builder</a></li>
+							<li><a class="menuitem" href="https://wiby.me/">Better Google</a></li>
+							<li><a class="menuitem" href="https://asnan111.github.io/CAED-Lab-1/Asnan.html">The Best Website On This Planet!</a></li>
+							<li><a class="menuitem" href="https://www.anothersadtrombone.com/?gdpr=1">Click Here If You Accomplished Something Great!</a></li>
+							<li><a class="menuitem" href="https://www.szynalski.com/tone-generator/">Cool Wave Sounds</a></li>
+							<li><a class="menuitem" href="https://www.boredbutton.com/">Are You Bored? Click Here!</a></li>
+							<li><a class="menuitem" href="https://billsworld.neocities.org/">Time Travel To 1999!</a></li>
+							<li><a class="menuitem" href="https://pixels.crd.co/">Pixels</a></li>
+						</ul>
+					</nav>
 				</section>
 			</div>
 	</div>
