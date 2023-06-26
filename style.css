@@ -35,23 +35,25 @@ h1{
 }
 
 .intro,.MainNoticeBoard{
-    width: 600px;
     max-width: 600px;
     margin-top: 0.5%; 
-    border-radius: 50px;
-    border: 1px solid rgb(228, 89, 64);
+    border-radius: 40px;
+    border: 1px solid rgba(228, 89, 64, 1);
     padding-left: 15px;
     padding-bottom: 15px;
 }
+.intro{
+    border-bottom: 0;
+}
+
 
 .menu{
     width: 20%;
-    flex-shrink: 0;
     margin-top: 0.2%; 
-    border-radius: 50px;
-    border: 1px solid rgb(228, 89, 64);
+    border-radius: 40px;
+    border: 1px solid rgb(228, 89, 64, 1);
     padding-left: 15px;
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
 }
 
 .linxmenu{
