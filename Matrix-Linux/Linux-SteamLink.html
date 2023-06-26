@@ -12,87 +12,88 @@
     <canvas id="Matrix"></canvas>
     <script src="Matrix-Script.js"></script>
 	<main>
-		<h1>Osama's Website!</h1>
-		<div>
-			<img src="../images/Backgrounds/GNU-vs.-GNULinux.png" alt="GNU/Linux" style="width: 40%; margin-bottom: -9%; margin-left: 30%; object-fit: fill;">
-		</div>
+        <header>
+		    <h1>Osama's Website!</h1>
+		    <div>
+		    	<img src="../images/Backgrounds/GNU-vs.-GNULinux.png" alt="GNU/Linux" style="width: 40%; margin-bottom: -9%; margin-left: 30%; object-fit: fill;">
+		    </div>
+        </header>
 		<div class="flexposition">
-				<div class="MainNoticeBoard">
-                    <section>
-                        <h2 class="int">How To Remotely Play Games.</h2>
-                        <p>There are multiple ways to play games remotely like <a class="menuitem" href="https://parsec.app/">Parsec</a>,<a class="menuitem" href="https://github.com/moonlight-stream/moonlight-qt">Moonlight</a>,<a class="menuitem" href="https://github.com/LizardByte/Sunshine">Sunshine</a> and <a class="menuitem" href="https://store.steampowered.com/remoteplay#anywhere">SteamLink</a>.</p>
-                        <p>We are going to focus on SteamLink as it is the easiest and works on almost every device.</p>
-                        <!-- This Block Makes That Horizontal Bar With That 101010 Animation -->
-                        <div class="maintopics">
-                            <h2 class="linuxboxitems">Download And Install SteamLink</h2>
-                        </div>
-                        <!-- The Animation Was Taken From SadGal online -->
-						<!-- https://sadgrl.online/webmastery/downloads/tiledbgs -->     
-                        <p>First Download Steamlink application on the system where you want to stream to (slower computer) from <a class="menuitem" href="https://store.steampowered.com/remoteplay#anywhere">here</a>.</p>
-
-                        <ul>
-                            <li><p><a style="color: rgb(255, 255, 255);" href="https://aur.archlinux.org/packages/steamlink">Arch:</a></p>yay -S steamlink</li>
-                            <li><p><a style="color: rgb(255, 255, 255);" href="https://flathub.org/apps/com.valvesoftware.SteamLink">Flatpak/Others:</a></p>flatpak install flathub com.valvesoftware.SteamLink</li>
-                        </ul>
-                        <!-- This Block Makes That Horizontal Bar With That 101010 Animation -->
-                        <div class="maintopics">
-                            <h2 class="linuxboxitems">Troubleshooting</h2>
-                        </div>
-                        <ul>
-                            <li><h2>Computers cannot detect one an other:</h2>
-                                <ol><li><p>Make sure you downloaded <a class="menuitem" href="https://aur.archlinux.org/packages/steamlink">Steamlink</a> to both computers.</p></li>
-                                    <li><p>Make sure both of them are running steam when searching for one another.</p></li>
+			<div class="MainNoticeBoard">
+                <section>
+                    <h2 class="int">How To Remotely Play Games.</h2>
+                    <p>There are multiple ways to play games remotely like <a class="menuitem" href="https://parsec.app/">Parsec</a>,<a class="menuitem" href="https://github.com/moonlight-stream/moonlight-qt">Moonlight</a>,<a class="menuitem" href="https://github.com/LizardByte/Sunshine">Sunshine</a> and <a class="menuitem" href="https://store.steampowered.com/remoteplay#anywhere">SteamLink</a>.</p>
+                    <p>We are going to focus on SteamLink as it is the easiest and works on almost every device.</p>
+                    <!-- This Block Makes That Horizontal Bar With That 101010 Animation -->
+                    <div class="maintopics">
+                        <h2 class="linuxboxitems">Download And Install SteamLink</h2>
+                    </div>
+                    <!-- The Animation Was Taken From SadGal online -->
+					<!-- https://sadgrl.online/webmastery/downloads/tiledbgs -->     
+                    <p>First Download Steamlink application on the system where you want to stream to (slower computer) from <a class="menuitem" href="https://store.steampowered.com/remoteplay#anywhere">here</a>.</p>
+                    <ul>
+                        <li><p><a style="color: rgb(255, 255, 255);" href="https://aur.archlinux.org/packages/steamlink">Arch:</a></p>yay -S steamlink</li>
+                        <li><p><a style="color: rgb(255, 255, 255);" href="https://flathub.org/apps/com.valvesoftware.SteamLink">Flatpak/Others:</a></p>flatpak install flathub com.valvesoftware.SteamLink</li>
+                    </ul>
+                    <!-- This Block Makes That Horizontal Bar With That 101010 Animation -->
+                    <div class="maintopics">
+                        <h2 class="linuxboxitems">Troubleshooting</h2>
+                    </div>
+                    <ul>
+                        <li><h2>Computers cannot detect one an other:</h2>
+                            <ol><li><p>Make sure you downloaded <a class="menuitem" href="https://aur.archlinux.org/packages/steamlink">Steamlink</a> to both computers.</p></li>
+                                <li><p>Make sure both of them are running steam when searching for one another.</p></li>
+                            </ol>
+                        </li>
+                        <li><h2>Controller Causes Double Input</h2>
+                            <ul>
+                                <li><p>This happens because steam makes a virtual controller so that we can map our controller's input button to anything we want. This makes "steamlink" think that there are 2 controllers when in fact there is only one of them. We just have to remove one of them.</p></li>
+                            </ul>
+                            <ul><h2>Windows</h2>
+                                <ol>
+                                    <li><p>Go to controller panel and disable one of the controller.</p></li>
+                                    <li><p>Or use <a class="menuitem" href="https://github.com/ViGEm/HidHide">HidHide</a>.</p></li>
+                                    <li><p>Or follow <a class="menuitem" href="https://ds4-windows.com/">DS4-For-Windows</a> guide.</p></li>
                                 </ol>
-                            </li>
-                            <li><h2>Controller Causes Double Input</h2>
-                                <ul>
-                                    <li><p>This happens because steam makes a virtual controller so that we can map our controller's input button to anything we want. This makes "steamlink" think that there are 2 controllers when in fact there is only one of them. We just have to remove one of them.</p></li>
-                                </ul>
-                                <ul><h2>Windows</h2>
-                                    <ol>
-                                        <li><p>Go to controller panel and disable one of the controller.</p></li>
-                                        <li><p>Or use <a class="menuitem" href="https://github.com/ViGEm/HidHide">HidHide</a>.</p></li>
-                                        <li><p>Or follow <a class="menuitem" href="https://ds4-windows.com/">DS4-For-Windows</a> guide.</p></li>
-                                    </ol>
-                                </ul>
-                                <ul><h2>GNU/Linux</h2>
-                                    <ol>
-                                        <li><p>Follow <a class="menuitem" href="https://github.com/AntiMicroX/antimicrox/wiki/Methods-for-Disabling-Joystick-Reading-in-Linux">this guide</a> to disable a controller.</p></li>
-                                        <li><p>Or follow <a class="menuitem" href="https://wiki.archlinux.org/title/Gamepad"> Arch Wiki</a>.</p></li>
-                                    </ol>
-                                </ul>
-                                <ul><p>Or follow my quick and dirty methord of first downloading <a class="menuitem" href="https://github.com/AntiMicroX/antimicrox">AntiMicroX</a>/<a class="menuitem" href="https://aur.archlinux.org/packages/antimicrox">AUR</a></p>
-                                    <ol><li><p>Open AntiMicroX.</p></li>
-                                        <li><p>Map 1 button.</p></li>
-                                        <li><p>Open Steam and SteamLink.</p></li>
-                                        <li><p>Steam will see only one controller.</p></li>
-                                    </ol>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="maintopics">
-                            <h2 class="linuxboxitems">Happy Gaming!</h2>
-                        </div>
-                        <h2 class="menuitem" style="margin-left: 40%;">Bye Bye!</h2>
-                        <!-- The Animation Was Taken From SadGal online -->
-						<!-- https://sadgrl.online/webmastery/downloads/tiledbgs -->   
-
-                    </section>
-                </div>
-				<div class="menu">
-					<section>
-					<h3 class="listhead">Explore!</h3>
-					<ul>
-						<li style="list-style-type: '🏠 ';"><a class="menuitem" href="../index.html">Home</a></li>
-						<li style=" list-style-image: url('../images/icons/School-Bag-Book.gif');"><a class="menuitem" href="../University.html">University Stuff</a></li>
-						<li style="list-style-type: '📕 ';"><a class="menuitem" href="../helpfulresources.html">Helpful Resources</a></li>
-						<li style="list-style-type: '🐧 ';"><a class="menuitem" href="../About-Linux.html">Me Using GNU/Linux</a></li>
-						<li style="list-style-type: '🎮 ';"><a class="menuitem" href="../Gaming.html">Me Gaming</a></li>
-					</ul>
-					
-				</section>
+                            </ul>
+                            <ul><h2>GNU/Linux</h2>
+                                <ol>
+                                    <li><p>Follow <a class="menuitem" href="https://github.com/AntiMicroX/antimicrox/wiki/Methods-for-Disabling-Joystick-Reading-in-Linux">this guide</a> to disable a controller.</p></li>
+                                    <li><p>Or follow <a class="menuitem" href="https://wiki.archlinux.org/title/Gamepad"> Arch Wiki</a>.</p></li>
+                                </ol>
+                            </ul>
+                            <ul><p>Or follow my quick and dirty methord of first downloading <a class="menuitem" href="https://github.com/AntiMicroX/antimicrox">AntiMicroX</a>/<a class="menuitem" href="https://aur.archlinux.org/packages/antimicrox">AUR</a></p>
+                                <ol><li><p>Open AntiMicroX.</p></li>
+                                    <li><p>Map 1 button.</p></li>
+                                    <li><p>Open Steam and SteamLink.</p></li>
+                                    <li><p>Steam will see only one controller.</p></li>
+                                </ol>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="maintopics">
+                        <h2 class="linuxboxitems">Happy Gaming!</h2>
+                    </div>
+                    <h2 class="menuitem" style="margin-left: 40%;">Bye Bye!</h2>
+                    <!-- The Animation Was Taken From SadGal online -->
+					<!-- https://sadgrl.online/webmastery/downloads/tiledbgs -->   
+                </section>
+            </div>
+			<div class="menu">
 				<section>
-					<h3 class="listhead">Interesting Stuff On The Internet</h3>
+				    <h3 class="listhead">Explore!</h3>
+					<nav>
+						<ul>
+							<li style="list-style-type: '🏠 ';"><a class="menuitem" href="../index.html">Home</a></li>
+							<li style=" list-style-image: url('../images/icons/School-Bag-Book.gif');"><a class="menuitem" href="../University.html">University Stuff</a></li>
+							<li style="list-style-type: '📕 ';"><a class="menuitem" href="../helpfulresources.html">Helpful Resources</a></li>
+							<li style="list-style-type: '🐧 ';"><a class="menuitem" href="../About-Linux.html">Me Using GNU/Linux</a></li>
+							<li style="list-style-type: '🎮 ';"><a class="menuitem" href="../Gaming.html">Me Gaming</a></li>
+						</ul>
+					</nav>
+			    </section>
+			    <section>
+				    <h3 class="listhead">Interesting Stuff On The Internet</h3>
                     <nav>
                         <ul>
                             <li><a class="menuitem" href="https://bugswriter.com/">BugsWriter</a></li>
@@ -109,9 +110,9 @@
                             <li><a class="menuitem" href="https://pixels.crd.co/">Pixels</a></li>
                         </ul>
                     </nav>
-				</section>
+			    </section>
 			</div>
-	</div>
+	    </div>
 	</main>
 <footer>
     <hr style="color:green">
