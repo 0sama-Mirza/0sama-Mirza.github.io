@@ -38,7 +38,7 @@
                     <ol>
                         <li><p>Open terminal and type:</p><p class="lialt">MOZ_ENABLE_WAYLAND=1 firefox</p></li>
                         <li><p>Scroll some random pages you will realize that it has been enabled.</p></li>
-                        <li><p>To automatically set it open " bash.profile " and paste the following code:</p><pre><code class="items">
+                        <li><p>To automatically set it open " bash.profile " and paste the following code:</p><pre><code>
 if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
     export MOZ_ENABLE_WAYLAND=1
 fi
@@ -57,7 +57,7 @@ fi
                         <li><p>Just replace chromium to any other chrome derivative browser e.g:</p><p class="lialt">brave --ozone-platform-hint=auto</p></li>
                         <li><p>To automatically set it go to <span>" /home/$User/.config "</span> and look for <span>"chromium-flags.conf"</span> file.</p></li>
                         <li><p>If you cant find it then simply create a new file by its name. The name will change according to the application e.g <span>"brave-flags.conf"</span></p></li>
-                        <li><p>Paste the following code inside it:</p><pre><code class="items">
+                        <li><p>Paste the following code inside it:</p><pre><code>
 # This line will be ignored.
 --ozone-platform-hint=auto
                         </code></pre></li>
@@ -65,7 +65,7 @@ fi
                     </ol>
                     <h2 class="main">To Enable 2 Fingure Gesture</h2>
                     <p class="lial">Just add the following into the previously mentioned flag:</p>
-                    <pre><code class="items">
+                    <pre><code>
 --enable-features=TouchpadOverscrollHistoryNavigation
                     </code></pre>
                     <div class="maintopics">
@@ -87,7 +87,7 @@ fi
                     <p>If chrome doesnt read that config file then you may have to go to</p> 
                     <ol>    
                         <li><span>"/usr/bin"</span><p> and search for </p><span>brave or chrominum</span></li>
-                    <li><p>Paste the following inside the file after the definition of XDG_CONFIG_HOME:</p><pre><code class="items">
+                    <li><p>Paste the following inside the file after the definition of XDG_CONFIG_HOME:</p><pre><code>
 # Allow users to override command-line options
 USER_FLAGS_FILE="$XDG_CONFIG_HOME/brave-flags.conf"
 if [[ -f $USER_FLAGS_FILE ]]; then
