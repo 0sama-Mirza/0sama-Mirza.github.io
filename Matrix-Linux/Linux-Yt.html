@@ -58,27 +58,27 @@ youtube-dl -g
 							</code></pre>
 						</li>
 						<li style="list-style-image: url('../images/icons/Pink-TV.gif');"><p class="listhead" style="color: white;">Using ffmpeg to cut the video.:</p>
-							<pre><code class="items">
+							<pre><code>
 ffmpeg -ss 08:51 -to 69:24 -i "(URL)" -ss 08:51 -to 69:24 -i "(URL) -c copy -avoid_negative_ts make_zero nameofthefile.mp4
 							</code></pre>
 						</li>
 						<li style="list-style-image: url('../images/icons/Duck-TV.gif');"><p class="listhead" style="color: white;">For Downloading Thumbnail.:</p>
-							<pre><code class="items">
+							<pre><code>
 youtube-dl --write-thumbnail --skip-download $URL
 							</code></pre>
 						</li>
 						<li style="list-style-image: url('../images/icons/Windows-TV.gif');"><p class="listhead" style="color: white;">For Mearging Audio and Video:</p>
-							<pre><code class="items">
+							<pre><code>
 ffmpeg -i (Video Name).mp4 -i (Audio Name).mp3 -c:v -c:a copy output.mp4
 							</code></pre>
 						</li>
 						<li style="list-style-image: url('../images/icons/Pink-TV.gif');"><p class="listhead" style="color: white;">Convert .webm into .mp4:</p>
-							<pre><code class="items">
+							<pre><code>
 ffmpeg -i 1.webm -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" dsa.mp4
 							</code></pre>
 						</li>
 						<li style="list-style-image: url('../images/icons/Duck-TV.gif');"><p class="listhead" style="color: white;">Write Subtitles:</p>
-							<pre><code class="items">
+							<pre><code>
 --write-subs 
 							</code></pre>
 						</li>
