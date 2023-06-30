@@ -39,12 +39,8 @@ yt-dlp --embed-chapters --split-chapters $URL
 						</li>
 						<li style="list-style-image: url('../images/icons/Windows-TV.gif');"><p class="listhead" style="color: white;">Best Download Speed(Needs aria2 and yt-dlp maybe):</p>
 							<pre><code>
-youtube-dl --external-downloader=aria2c 
---external-downloader-args '--min-split-size=1M 
---max-connection-per-server=16 
---max-concurrent-downloads=16 --split=16' $URL
+youtube-dl --external-downloader=aria2c --external-downloader-args '--min-split-size=1M --max-connection-per-server=16 --max-concurrent-downloads=16 --split=16' $URL
 							</code></pre>
-						(This is all in one line!)
 						</li>
 						<li style="list-style-image: url('../images/icons/Small-Radio.gif');"><p class="listhead" style="color: white;">For Extracting audio.:</p>
 							<pre><code>
@@ -53,8 +49,7 @@ youtube-dl --extract-audio --audio-format mp3 $URL
 						</li>
 						<li style="list-style-image: url('../images/icons/Small-Laptop.gif');"><p class="listhead" style="color: white;">For Adding Thimbnail and Metadata.:</p>
 							<pre><code>
-yt-dlp --extract-audio --audio-format best --embed-thumbnail 
---add-metadata $URL
+yt-dlp --extract-audio --audio-format best --embed-thumbnail --add-metadata $URL
 							</code></pre>
 						</li>
 						<li style="list-style-image: url('../images/icons/Duck-TV.gif');"><p class="listhead" style="color: white;">For extracting actual video url. The first one is the Video while the second one is the audio.:</p>
@@ -64,8 +59,7 @@ youtube-dl -g
 						</li>
 						<li style="list-style-image: url('../images/icons/Pink-TV.gif');"><p class="listhead" style="color: white;">Using ffmpeg to cut the video.:</p>
 							<pre><code class="items">
-ffmpeg -ss 08:51 -to 69:24 -i "(URL)" -ss 08:51 -to 69:24 -i "(URL) 
--c copy -avoid_negative_ts make_zero nameofthefile.mp4
+ffmpeg -ss 08:51 -to 69:24 -i "(URL)" -ss 08:51 -to 69:24 -i "(URL) -c copy -avoid_negative_ts make_zero nameofthefile.mp4
 							</code></pre>
 						</li>
 						<li style="list-style-image: url('../images/icons/Duck-TV.gif');"><p class="listhead" style="color: white;">For Downloading Thumbnail.:</p>
@@ -75,8 +69,7 @@ youtube-dl --write-thumbnail --skip-download $URL
 						</li>
 						<li style="list-style-image: url('../images/icons/Windows-TV.gif');"><p class="listhead" style="color: white;">For Mearging Audio and Video:</p>
 							<pre><code class="items">
-ffmpeg -i (Video Name).mp4 -i (Audio Name).mp3 -c:v -c:a 
-copy output.mp4
+ffmpeg -i (Video Name).mp4 -i (Audio Name).mp3 -c:v -c:a copy output.mp4
 							</code></pre>
 						</li>
 						<li style="list-style-image: url('../images/icons/Pink-TV.gif');"><p class="listhead" style="color: white;">Convert .webm into .mp4:</p>
