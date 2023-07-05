@@ -41,6 +41,7 @@ h1,.h1alt{
     align-items: flex-start;
     /* justify-content: space-evenly; */
     flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
     gap:20px;
 }
 
@@ -70,9 +71,7 @@ code {
 }
 .menu{
     background-color: black;
-    width: 20%;
-    flex-shrink: 0;
-    /* margin-left: 4%; */
+    width: 250px;
     margin-top: 0.2%; 
     border-radius: 50px;
     border: 1px solid rgb(228, 89, 64);
