@@ -58,7 +58,6 @@ h1{
 }
 .before{
     color: whitesmoke;
-
 }
 p{
     color:whitesmoke; 
@@ -94,6 +93,7 @@ code {
     border-radius: 10px;
     display: block
 }
+
 .menuitem{
     /* font-size: larger; */
     color: rgb(0, 255, 0);
@@ -113,4 +113,7 @@ code {
 }
 .top-image:hover{
 opacity: 0;
+}
+.myButton{
+    margin-left: 8%;
 }
