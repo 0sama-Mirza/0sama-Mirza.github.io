@@ -9,7 +9,7 @@ h1{
     border-right: 2px solid pink;
     width: 400px;
     text-align: center;
-    /* box-shadow: 4px 4px 5px #8888; */
+    box-shadow: 4px 4px 5px #ffffff88;
     margin-top: 10px;
 }
 .container{
@@ -29,6 +29,7 @@ img{
     height: auto;
     margin: 10px;
     transition: all 1s;
+    image-rendering: optimizeSpeed;
 }
 img:hover{
     transform: scale(1.1);
