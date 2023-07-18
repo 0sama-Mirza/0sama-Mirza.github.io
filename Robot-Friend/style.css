@@ -1,3 +1,9 @@
+body {
+	background-image: url("https://img.freepik.com/premium-photo/3d-rendering-welding-robotic-arms-with-blank-space-white-background_493806-7833.jpg?w=826");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0px;
+}
 h1 {
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
