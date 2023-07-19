@@ -41,14 +41,19 @@ h1{
 .intro{
     border-bottom: 0;
 }
-
-
 .menu{
     width: 250px;
     margin-top: 0.2%; 
     border-radius: 40px;
     border: 1px solid rgb(228, 89, 64, 1);
     padding-left: 15px;
+}
+.Cool_Websites {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    margin-left: 10%;
+    margin-top: 1%;
 }
 
 .linxmenu{
