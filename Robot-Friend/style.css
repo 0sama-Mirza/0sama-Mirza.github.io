@@ -3,6 +3,14 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 h1 {
 	text-align: center;
@@ -12,6 +20,7 @@ h1 {
 	flex-wrap: wrap;
 	display: flex;
 	justify-content: center;
+	flex-grow: 1;
 }
 .head, 
 .left_arm, 
@@ -66,20 +75,17 @@ h1 {
 	height: 200px;
 	border-radius: 0 0 50px 50px; 
 } 
-
 .lower_body { 
 	width: 200px; 
 	height: 200px;
 	margin: 0 auto;
 	display: flex;
 } 
-
 .left_leg, .right_leg { 
 	width: 40px; 
 	height: 120px;
 	border-radius: 0 0 100px 100px; 
 } 
-
 .left_leg { 
 	margin-left: 45px; 
 } 
@@ -90,7 +96,6 @@ h1 {
     -ms-transform: rotate(20deg);
     transform: rotate(20deg);
 }
-
 .right_leg:hover {
 	-webkit-transform: rotate(-20deg);
     -moz-transform: rotate(-20deg);
@@ -161,4 +166,8 @@ h1 {
 	position: relative; 
 	top: 35px; 
 	left: 45px;
+}
+footer{
+	margin-top: auto;
+	text-align: center;
 }
