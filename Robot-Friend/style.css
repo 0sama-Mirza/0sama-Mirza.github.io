@@ -1,11 +1,12 @@
+html,
 body {
-	background-image: url("https://img.freepik.com/premium-photo/3d-rendering-welding-robotic-arms-with-blank-space-white-background_493806-7833.jpg?w=826");
+	width: 100%;
+  	height: 100%;
+	background: url("https://img.freepik.com/premium-photo/3d-rendering-welding-robotic-arms-with-blank-space-white-background_493806-7833.jpg?w=826") center fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 	margin: 0px;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
 }
 .wrapper {
 	min-height: 100vh;
