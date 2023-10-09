@@ -6,7 +6,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin: 0px 0px;
+    margin: 0;
 }
 h1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -36,7 +36,6 @@ img{
     height: auto;
     margin: 10px;
     transition: all 1s;
-    image-rendering: optimizeSpeed;
 }
 img:hover{
     transform: scale(1.1);

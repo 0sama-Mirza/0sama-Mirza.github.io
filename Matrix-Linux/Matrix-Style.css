@@ -119,3 +119,31 @@ span{
     font-size: larger;
     color: rgb(0, 255, 13);
 }
+.bash-prompt {
+    margin: 0;
+}
+
+.bash-prompt pre {
+    /* color: #00FFFF; */
+    color: #98FB98;
+
+    /* color: #39FF14; */
+
+    font-family: 'Fira Code', monospace;
+    overflow: auto; /* Add scrollbars when content overflows */
+    font-size: 14px;
+    white-space: pre-wrap;/*  Preserve whitespace and wrap text */
+}
+.bash-prompt button {
+    background-color: rgb(112, 243, 119); /* Set the button's background color to the specified RGB value */
+    color: rgb(0, 0, 0); /* Set the button's text color to black */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px; /* Set the font size for the button */
+}
+
+.bash-prompt button:hover {
+    background-color: rgb(241, 253, 78); /* Change the button's background color on hover */
+}
+
