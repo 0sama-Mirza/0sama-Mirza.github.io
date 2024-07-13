@@ -50,6 +50,7 @@
 
       discoInterval = setInterval(() => {
           document.body.style.backgroundColor = colors[colorIndex];
+          document.querySelector('footer').style.backgroundColor = colors[colorIndex];
           colorIndex = (colorIndex + 1) % colors.length;
       }, 500);
   }
