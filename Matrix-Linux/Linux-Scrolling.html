@@ -32,21 +32,21 @@
                     </div>
                     <h2 class="main">For Xorg</h2>
                     <ol>
-                        <li><p>Open Firefox and type following in the url:</p><p class="lialt">about:config</p></li>
-                        <li><p>Search </p><p class="lialt">apz. gtk. kinetic_scroll. enabled</p></li>
-                        <li><p>enable/disable it.</p></li>
+                        <li><span class="textW">Open Firefox and type following in the url</span>:<p class="lialt">about:config</p></li>
+                        <li><span class="textW">Search </span><p class="lialt">apz. gtk. kinetic_scroll. enabled</p></li>
+                        <li><span class="textW">enable/disable it.</span></li>
                     </ol>
                     <h2 class="main">For Wayland</h2>
                     <ol>
-                        <li><p>Open terminal and type:</p><p class="lialt">MOZ_ENABLE_WAYLAND=1 firefox</p></li>
-                        <li><p>Scroll some random pages you will realize that it has been enabled.</p></li>
-                        <li><p>To automatically set it open " bash.profile " and paste the following code:</p><pre><code>
+                        <li><span class="textW">Open terminal and type:</span><p class="lialt">MOZ_ENABLE_WAYLAND=1 firefox</p></li>
+                        <li><span class="textW">Scroll some random pages you will realize that it has been enabled.</span></li>
+                        <li><span class="textW">To automatically set it open " bash.profile " and paste the following code:</span><pre><code>
 if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
     export MOZ_ENABLE_WAYLAND=1
 fi
 [[ -f ~/.bashrc ]] && . ~/.bashrc
                         </code></pre></li>
-                        <li><p class="lialt">Save and restart!</p></li>
+                        <li><span class="textW">Save and restart!</span></li>
                     </ol>
                     <p class="lial">You can also use 2 fingure swipe to go forward and backwards.</p>
                     <div class="maintopics">
@@ -55,15 +55,15 @@ fi
                     <h2 class="main">For Wayland Only(I have not used chrome on Xorg)</h2>
                     <p>Steps Are Almost The Same As Firefox.</p>
                     <ol>
-                        <li><p>Open terminal and type:</p><p class="lialt">chromium --ozone-platform-hint=auto</p></li>
-                        <li><p>Just replace chromium to any other chrome derivative browser e.g:</p><p class="lialt">brave --ozone-platform-hint=auto</p></li>
-                        <li><p>To automatically set it go to <span>" /home/$User/.config "</span> and look for <span>"chromium-flags.conf"</span> file.</p></li>
-                        <li><p>If you cant find it then simply create a new file by its name. The name will change according to the application e.g <span>"brave-flags.conf"</span></p></li>
-                        <li><p>Paste the following code inside it:</p><pre><code>
+                        <li><span class="textW">Open terminal and type:</span><p class="lialt">chromium --ozone-platform-hint=auto</p></li>
+                        <li><span class="textW">Just replace chromium to any other chrome derivative browser e.g:</span><p class="lialt">brave --ozone-platform-hint=auto</p></li>
+                        <li><span class="textW">To automatically set it go to <span>" /home/$User/.config "</span> and look for <span>"chromium-flags.conf"</span> file.</span></li>
+                        <li><span class="textW">If you cant find it then simply create a new file by its name. The name will change according to the application e.g <span>"brave-flags.conf"</span></span></li>
+                        <li><span class="textW">Paste the following code inside it:</span><pre><code>
 # This line will be ignored.
 --ozone-platform-hint=auto
                         </code></pre></li>
-                        <li><p class="lialt">Save and restart!</p></li>
+                        <li><span class="textW">Save and restart!</span></li>
                     </ol>
                     <h2 class="main">To Enable 2 Fingure Gesture</h2>
                     <p class="lial">Just add the following into the previously mentioned flag:</p>
@@ -75,12 +75,12 @@ fi
                     </div>
                     <h2 class="main">If you have installed a PWA from chrominum then when you will click on its icon the wayland support wont turn on. To fix that follow the steps below:</h2>
                     <ol>
-                        <li><p>go to <span>" /home/$User/.local/share/applications/ "</span> and look for anything that starts with <span>chromium/brave/chrome etc</span></p></li>
-                        <li><p>These files will have random names like <span>"brave-jdklklfpinionkgpmghaghehojplfjio-Default.desktop"</span> These are those individual PWA's</p></li>
-                        <li><p>Open every single one of them through a text editor.</p></li>
-                        <li><p>In the <span>"Exec="</span> part you will notice the name of the program is written alown with some flags. We only need to add the previous flag in it.</p></li>
-                        <li><p>Copy Paste and thats it! Here is how it will look:<br><br>
-                        <span>Exec=/usr/lib/brave-bin/brave --ozone-platform-hint=auto --profile-directory=Default --app-id=jdklklfpinionkgpmghaghehojplfjio</span></p></li>
+                        <li><span class="textW">go to <span>" /home/$User/.local/share/applications/ "</span> and look for anything that starts with <span>chromium/brave/chrome etc</span></span></li>
+                        <li><span class="textW">These files will have random names like <span>"brave-jdklklfpinionkgpmghaghehojplfjio-Default.desktop"</span> These are those individual PWA's</span></li>
+                        <li><span class="textW">Open every single one of them through a text editor.</span></li>
+                        <li><span class="textW">In the <span>"Exec="</span> part you will notice the name of the program is written alown with some flags. We only need to add the previous flag in it.</span></li>
+                        <li><span class="textW">Copy Paste and thats it! Here is how it will look:<br><br>
+                        <span>Exec=/usr/lib/brave-bin/brave --ozone-platform-hint=auto --profile-directory=Default --app-id=jdklklfpinionkgpmghaghehojplfjio</span></span></li>
                     </ol>
                     <div class="maintopics">
                         <h2 class="linuxboxitems">Troubleshooting</h2>
@@ -89,20 +89,20 @@ fi
                     <p>If chrome doesnt read that config file then you may have to go to</p> 
                     <ol>    
                         <li><span>"/usr/bin"</span><p> and search for </p><span>brave or chrominum</span></li>
-                    <li><p>Paste the following inside the file after the definition of XDG_CONFIG_HOME:</p><pre><code>
+                    <li><span class="textW">Paste the following inside the file after the definition of XDG_CONFIG_HOME:</span><pre><code>
 # Allow users to override command-line options
 USER_FLAGS_FILE="$XDG_CONFIG_HOME/brave-flags.conf"
 if [[ -f $USER_FLAGS_FILE ]]; then
    USER_FLAGS="$(cat $USER_FLAGS_FILE | sed 's/#.*//')"
 fi
                     </code></pre></li>
-                    <li><p>Replace <span>"brave"</span> to your desired browser.</p></li>
-                    <li><p>Save , quit and restart!</p></li>
+                    <li><span class="textW">Replace <span>"brave"</span> to your desired browser.</span></li>
+                    <li><span class="textW">Save , quit and restart!</span></li>
                     </ol>
                     <div class="maintopics">
                         <h2 class="linuxboxitems">Still Doesnt Work?</h2>
                     </div>
-                    <a  class="menuitem" href="https://www.reddit.com/r/pop_os/comments/lh3vnk/chrome_and_chromium_refuse_to_read/">This Might Help You Out!</a>
+                    <a class="menuitem" style="padding-left: 15px;" href="https://www.reddit.com/r/pop_os/comments/lh3vnk/chrome_and_chromium_refuse_to_read/">This Might Help You Out!</a>
                 </section>
             </div>
 			<div class="menu">

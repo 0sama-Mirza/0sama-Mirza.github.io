@@ -74,8 +74,11 @@ h1{
     margin-top: 0.5%; 
     border-radius: 40px;
     border: 1px solid var(--Dark-border);
-    padding-left: 15px;
+    /* padding-left: 15px; */
     padding-bottom: 15px;
+}
+.intro * {
+    margin: 15px;
 }
 .intro{
     border-bottom: 0;
@@ -153,7 +156,6 @@ code {
     max-height: 30px;
     border: 1px solid var(--Dark-li);
     background-image: url(images/Backgrounds/num.gif);
-    margin-left: -2.5%;
 }
 .top-image:hover{
 opacity: 0;

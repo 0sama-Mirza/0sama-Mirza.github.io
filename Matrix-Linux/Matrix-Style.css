@@ -55,12 +55,15 @@ h1,.h1alt{
     background-color: black;
     max-width: 600px;
     margin-top: 0.2%;
-    /* margin-left: 10%;  */
     border-radius: 40px;
     border: 1px solid rgb(228, 89, 64);
-    padding-left: 15px;
     padding-bottom: 15px;
 }
+.MainNoticeBoard p {
+    margin: 15px;
+}
+
+
 code {
     /* font-family: Consolas,"courier new"; */
     color: rgb(0, 255, 0);
@@ -87,8 +90,8 @@ code {
 .main{
     color: white;
     font-size: 22px;
-    text-align: start;
     margin-top: -0.1px;
+    padding-left: 15px;
 }
 .linuxboxitems{
     color: rgb(224, 203, 8);
@@ -102,9 +105,13 @@ code {
     max-height: 30px;
     border: 1px solid tomato;
     background-image: url(../images/Backgrounds/num.gif);
-    margin-left: -2.5%;
 }
 p{
+    color:whitesmoke; 
+    font-size:medium;
+}
+
+.textW {
     color:whitesmoke; 
     font-size:medium;
 }
@@ -150,4 +157,8 @@ span{
 
 .bash-prompt button:hover {
     background-color: rgb(241, 253, 78); /* Change the button's background color on hover */
+}
+
+#Footer-Text{
+    color: yellow;
 }
