@@ -77,7 +77,7 @@ h1{
     /* padding-left: 15px; */
     padding-bottom: 15px;
 }
-.intro * {
+.intro h2,p {
     margin: 15px;
 }
 .intro{
