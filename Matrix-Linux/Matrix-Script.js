@@ -7,8 +7,11 @@ canvas.height = window.innerHeight;
 const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
 const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const nums = '0123456789';
+// const urduAlphabets = 'ا ب پ ت ٹ ث ج چ ح خ د ڈ ذ ر ڑ ز ژ س ش ص ض ط ظ ع غ ف ق ک ل م ن ں و ہ ھ ء ی ے';
+const urduAlphabets = 'ابپتٹثجچحخدڈذرڑزژسشصضطظعغفقکلمنںوہھءیے';
+const urduNums = '۰۱۲۳۴۵۶۷۸۹';
 
-const alphabet = katakana + latin + nums;
+const alphabet = katakana + latin + nums + urduAlphabets + urduNums;
 
 const fontSize = 16;
 const columns = canvas.width/fontSize;
