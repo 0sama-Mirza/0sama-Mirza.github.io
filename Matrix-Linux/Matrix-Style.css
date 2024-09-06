@@ -1,159 +1,243 @@
-:root{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-html{
-    background-color: black;
+html {
+  background-color: black;
 }
-body,html{
-    width: 100%;
-    height: 100%;
-    margin: 0;   
-    padding: 0;
-}
-
-canvas{
-    margin-top: -26.8px;
-    resize: vertical;
-    position: fixed;
-    z-index: -1;
-}
-h1,.h1alt{
-    /* color: rgb(182, 79, 10);  */
-    color: rgb(228, 89, 64);
-    font-size: 40px; 
-    text-align: center;
-    margin-bottom: 0.1%;
-}
-.int{
-    text-align: center;
-    color: rgb(204, 185, 14);
-    /* color: rgb(255, 230, 0); */
-    font-size: 25px; 
-    margin-top: 40px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.flexposition{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: flex-start;
-    /* justify-content: space-evenly; */
-    flex-wrap: wrap;
-    /* flex-wrap: wrap-reverse; */
-    gap:20px;
+canvas {
+  margin-top: -26.8px;
+  resize: vertical;
+  position: fixed;
+  z-index: -1;
+}
+h1,
+.h1alt {
+  /* color: rgb(182, 79, 10);  */
+  color: rgb(228, 89, 64);
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 0.1%;
+}
+.int {
+  text-align: center;
+  color: rgb(204, 185, 14);
+  /* color: rgb(255, 230, 0); */
+  font-size: 25px;
+  margin-top: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.MainNoticeBoard{
-    /* background-image: url(../images/Backgrounds/num.gif); */
-    background-color: black;
-    max-width: 600px;
-    margin-top: 0.2%;
-    border-radius: 40px;
-    border: 1px solid rgb(228, 89, 64);
-    padding-bottom: 15px;
+.flexposition {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  /* justify-content: space-evenly; */
+  flex-wrap: wrap;
+  /* flex-wrap: wrap-reverse; */
+  gap: 20px;
+}
+
+.MainNoticeBoard {
+  /* background-image: url(../images/Backgrounds/num.gif); */
+  background-color: black;
+  max-width: 600px;
+  margin-top: 0.2%;
+  border-radius: 40px;
+  border: 1px solid rgb(228, 89, 64);
+  padding-bottom: 15px;
 }
 .MainNoticeBoard p {
-    margin: 15px;
+  margin: 15px;
 }
-
 
 code {
-    /* font-family: Consolas,"courier new"; */
-    color: rgb(0, 255, 0);
-    /* padding: 2px; */
-    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-    /* line-height: 1.5 !important; */
-    overflow-x: auto !important;
-    /* padding: 10px !important; */
-    white-space: pre-wrap !important;
+  /* font-family: Consolas,"courier new"; */
+  color: rgb(0, 255, 0);
+  /* padding: 2px; */
+  /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  /* line-height: 1.5 !important; */
+  overflow-x: auto !important;
+  /* padding: 10px !important; */
+  white-space: pre-wrap !important;
 }
-.menu{
-    background-color: black;
-    width: 250px;
-    margin-top: 0.2%; 
-    border-radius: 50px;
-    border: 1px solid rgb(228, 89, 64);
-    padding-left: 15px;
-    padding-bottom: 15px;
-}
-
-.main{
-    color: white;
-    font-size: 22px;
-    margin-top: -0.1px;
-    padding-left: 15px;
-}
-.linuxboxitems{
-    color: rgb(224, 203, 8);
-    font-size: 22px;
-    text-align: start;
-    margin-top: -0.1px;
+.menu {
+  background-color: black;
+  width: 250px;
+  margin-top: 0.2%;
+  border-radius: 50px;
+  border: 1px solid rgb(228, 89, 64);
+  padding-left: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
 }
 
-.maintopics{
-    padding-left: 20px;
-    max-height: 30px;
-    border: 1px solid tomato;
-    background-image: url(../images/Backgrounds/num.gif);
+.main {
+  color: white;
+  font-size: 22px;
+  margin-top: -0.1px;
+  padding-left: 15px;
 }
-p{
-    color:whitesmoke; 
-    font-size:medium;
+.linuxboxitems {
+  color: rgb(224, 203, 8);
+  font-size: 22px;
+  text-align: start;
+  margin-top: -0.1px;
+}
+
+.maintopics {
+  padding-left: 20px;
+  max-height: 30px;
+  border: 1px solid tomato;
+  background-image: url(../images/Backgrounds/num.gif);
+}
+p {
+  color: whitesmoke;
+  font-size: medium;
 }
 
 .textW {
-    color:whitesmoke; 
-    font-size:medium;
+  color: whitesmoke;
+  font-size: medium;
 }
-li,.lialt{
-    color: tomato;
+li,
+.lialt {
+  color: tomato;
 }
-span{
-    color: tomato;
+span {
+  color: tomato;
 }
-.listhead{
-    font-size: larger;
-    font-style: italic;
-    color: rgb(224, 203, 8);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.listhead {
+  font-size: larger;
+  font-style: italic;
+  color: rgb(224, 203, 8);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: auto;
 }
-.menuitem{
-    font-size: larger;
-    color: rgb(0, 255, 13);
+.menuitem {
+  font-size: larger;
+  color: rgb(0, 255, 13);
 }
 .bash-prompt {
-    margin: 0;
+  margin: 0;
 }
 
 .bash-prompt pre {
-    /* color: #00FFFF; */
-    color: #98FB98;
+  /* color: #00FFFF; */
+  color: #98fb98;
 
-    /* color: #39FF14; */
+  /* color: #39FF14; */
 
-    font-family: 'Fira Code', monospace;
-    overflow: auto; /* Add scrollbars when content overflows */
-    font-size: 14px;
-    white-space: pre-wrap;/*  Preserve whitespace and wrap text */
+  font-family: "Fira Code", monospace;
+  overflow: auto; /* Add scrollbars when content overflows */
+  font-size: 14px;
+  white-space: pre-wrap; /*  Preserve whitespace and wrap text */
 }
 .bash-prompt button {
-    background-color: rgb(112, 243, 119); /* Set the button's background color to the specified RGB value */
-    color: rgb(0, 0, 0); /* Set the button's text color to black */
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 12px; /* Set the font size for the button */
+  background-color: rgb(
+    112,
+    243,
+    119
+  ); /* Set the button's background color to the specified RGB value */
+  color: rgb(0, 0, 0); /* Set the button's text color to black */
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px; /* Set the font size for the button */
 }
 
 .bash-prompt button:hover {
-    background-color: rgb(241, 253, 78); /* Change the button's background color on hover */
+  background-color: rgb(
+    241,
+    253,
+    78
+  ); /* Change the button's background color on hover */
 }
 
-#Footer-Text{
-    color: yellow;
+#Footer-Text {
+  color: yellow;
+}
+
+/* NEWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+.prayer-timing {
+  display: flex;
+  flex-direction: column;
+}
+#countries {
+  display: inline-block;
+  text-align: center;
+  background-color: #ffeba7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+}
+
+#countries:hover {
+  border-color: #888;
+}
+
+#map {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+
+.close-button {
+  display: none;
+  position: fixed; /* Make the button fixed so it stays visible while scrolling */
+  top: 10px; /* Position from the top of the viewport */
+  right: 10px; /* Position from the right of the viewport */
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 10%;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+
+.prayer-list{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  padding: 0;
+}
+
+
+.prayer-item {
+  display: flex;
+  justify-content: space-between; 
+  border-bottom: 1px solid #ddd; 
+}
+
+.prayer-name {
+  font-weight: bold; 
+}
+.prayer-time {
+  /* color: #555;  */
+  color: white;
 }

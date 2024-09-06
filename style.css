@@ -163,3 +163,80 @@ opacity: 0;
 .myButton{
     margin-left: 8%;
 }
+
+/* NEWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW */
+.prayer-timing {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+}
+#countries {
+  display: inline-block;
+  text-align: center;
+  background-color: #ffeba7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+}
+
+#countries option {
+    background-color: yellow; 
+    color: #333; 
+}
+
+
+#countries:hover {
+  border-color: #888;
+}
+
+#map {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  background-color: black;
+  z-index: 1000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+
+.close-button {
+  display: none;
+  position: fixed; /* Make the button fixed so it stays visible while scrolling */
+  top: 10px; /* Position from the top of the viewport */
+  right: 10px; /* Position from the right of the viewport */
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 10%;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+
+.prayer-list{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  padding: 0;
+}
+
+
+.prayer-item {
+  display: flex;
+  justify-content: space-between; 
+  border-bottom: 1px solid #ddd; 
+}
+
+.prayer-name {
+  font-weight: bold; 
+}
+.prayer-time {
+  /* color: #555;  */
+  color: var(--Dark-before);
+}

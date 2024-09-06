@@ -6,8 +6,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="icon" type="image/x-icon" href="../images/icons/favicon-H.ico">
 	<link rel="stylesheet" href="Matrix-Style.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+	integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+	crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+	integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+	crossorigin=""></script>
 	<!-- <script src="../Script/footer.js" defer></script> -->
 	<!-- <script src="../Script/menu.js" defer></script> -->
+	 <script src="../Script/namaz-timing.js" defer></script>
 	<title>Osama Using GNU/Linux</title>
 </head>
 <body>
@@ -35,7 +42,7 @@
             </div>
 			<div class="menu">
 				<section>
-					<h3 class="listhead">Explore!</h3>
+					<h3 class="listhead" style="margin-top: 15px;">Explore!</h3>
 					<nav>
 						<ul>
 							<li style="list-style-type: '🏠 ';"><a class="menuitem" href="../index.html">Home</a></li>
@@ -47,20 +54,56 @@
 						<a style="margin-left: 7%;" href="https://decolonizepalestine.com/" target="_blank"><img alt="88x31 button that says Stand with Palestine" src="../images/Buttons/standwithFalasteen.png"></a>
 					</nav>
 				</section>
+				<section class="prayer-timing">
+					<h3 class="listhead" id="Salah-Time">Salah Timings</h3>
+					<!-- Drop Down Menu -->
+					<select name="countries" id="countries">
+						<option value="default" disabled selected>Loading Countries</option>
+					</select>
+					<!-- Prayer Timings as a List -->
+					<ul class="prayer-list">
+						<li class="prayer-item">
+						  <div class="prayer-details">
+							<span class="prayer-name">Fajr</span>
+							<span class="prayer-time">Loading...</span>
+						  </div>
+						</li>
+						<li class="prayer-item">
+						  <div class="prayer-details">
+							<span class="prayer-name">Dhuhr</span>
+							<span class="prayer-time">Loading...</span>
+						  </div>
+						</li>
+						<li class="prayer-item">
+						  <div class="prayer-details">
+							<span class="prayer-name">Asr</span>
+							<span class="prayer-time">Loading...</span>
+						  </div>
+						</li>
+						<li class="prayer-item">
+						  <div class="prayer-details">
+							<span class="prayer-name">Maghrib</span>
+							<span class="prayer-time">Loading...</span>
+						  </div>
+						</li>
+						<li class="prayer-item">
+						  <div class="prayer-details">
+							<span class="prayer-name">Isha</span>
+							<span class="prayer-time">Loading...</span>
+						  </div>
+						</li>
+					  </ul>					  
+				</section>
 				<section>
 					<h3 class="listhead">Interesting Stuff On The Internet</h3>
 					<nav>
 						<ul>
 							<li><a class="menuitem" href="https://bugswriter.com/">BugsWriter</a></li>
-							<li><a class="menuitem" href="https://sadgrl.online/">SadGrl</a></li>
-							<li><a class="menuitem" href="https://links.yesterweb.org/">When The Internet Felt Exciting And Mysterious</a></li>
 							<li><a class="menuitem" href="https://adam.omg.lol/">OMG LOL</a></li>
 							<li><a class="menuitem" href="http://txti.es/">Simple Website Builder</a></li>
-							<li><a class="menuitem" href="https://wiby.me/">Better Google</a></li>
 							<li><a class="menuitem" href="https://asnan111.github.io/CAED-Lab-1/Asnan.html">The Best Website On This Planet!</a></li>
 							<li><a class="menuitem" href="https://www.anothersadtrombone.com/?gdpr=1">Click Here If You Accomplished Something Great!</a></li>
 							<li><a class="menuitem" href="https://www.szynalski.com/tone-generator/">Cool Wave Sounds</a></li>
-							<li><a class="menuitem" href="https://www.boredbutton.com/">Are You Bored? Click Here!</a></li>
 							<li><a class="menuitem" href="https://billsworld.neocities.org/">Time Travel To 1999!</a></li>
 							<li><a class="menuitem" href="https://pixels.crd.co/">Pixels</a></li>
 						</ul>
@@ -69,6 +112,11 @@
 			</div>
 		</div>
 	</main>
+	
+	<div id="mapContainer">
+		<div id="map" anchor="closeMapButton"></div>
+		<button id="closeMapButton" anchor="map" class="close-button">&times;</button>
+	  </div>
 <footer>
     <hr style="color:green">
       <p style="text-align: center;" 
