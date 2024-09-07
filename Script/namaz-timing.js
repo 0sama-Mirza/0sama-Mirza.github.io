@@ -1,6 +1,6 @@
 "use strick";
 
-document.addEventListener('menuLoaded', function() {
+document.addEventListener("menuLoaded", function () {
   const countries = document.getElementById("countries");
   const closeMapButton = document.getElementById("closeMapButton");
   const Salah_Time = document.getElementById("Salah-Time");
@@ -10,91 +10,93 @@ document.addEventListener('menuLoaded', function() {
   let currentMarker;
   let map;
   const zoomLevel = 6;
-  
+
   const getCurrentDate = function () {
     const today = new Date();
     const day = String(today.getDate()).padStart(2, "0");
     const month = String(today.getMonth() + 1).padStart(2, "0"); // Months are 0-indexed
     const year = today.getFullYear();
-  
+
     return `${day}-${month}-${year}`;
   };
-  
+
   const getJSON = async function (url, errorMsg = "Something went wrong.") {
     const response = await fetch(url);
     if (!response.ok) throw new Error(`${errorMsg}: ${response.status}`);
     return await response.json();
   };
-  
-  
+
   const getSensableSubRegion = function () {
     if (!selectedLocation || !selectedLocation.address) {
-        console.log("Location data not available");
-        return null;
+      console.log("Location data not available");
+      return null;
     }
-    
+
     const address = selectedLocation.address;
-    
+
     // Prioritize the available sub-region in a sensible order
     if (address.village) {
-        return address.village;
+      return address.village;
     } else if (address.suburb) {
-        return address.suburb;
+      return address.suburb;
     } else if (address.town) {
-        return address.town;
+      return address.town;
     } else if (address.city_district) {
-        return address.city_district;
+      return address.city_district;
     } else if (address.city) {
-        return address.city;
+      return address.city;
     } else if (address.county) {
-        return address.county;
+      return address.county;
     } else if (address.state) {
-        return address.state;
+      return address.state;
     } else if (address.country) {
-        return address.country;
+      return address.country;
     } else {
-        console.log("No sub-region found");
-        return null;
+      console.log("No sub-region found");
+      return null;
     }
-};
+  };
 
-  
   const Namaz_Timing = async function (lat, lng) {
     try {
       const Namaz_Obj = await getJSON(
         `https://api.aladhan.com/v1/timings/${getCurrentDate()}?latitude=${lat}&longitude=${lng}&method=4&school=1&adjustment=1`,
         "Salah Timing Not Found!"
       );
-  
+
       // Reverse GeoCoding:
-  
+
       selectedLocation = await getJSON(
         `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`,
         "No response from the reverse geocoding API."
       );
-  // LocalStorage
+      // LocalStorage
       const selectedLocationString = JSON.stringify(selectedLocation);
-      localStorage.setItem('selectedLocation', selectedLocationString);
-  
+      localStorage.setItem("selectedLocation", selectedLocationString);
+
       // Extract the country code
       const countryCode = selectedLocation.address.country_code.toLowerCase();
-  
+
       // Find the matching country
-      const matchingCountry = countriesData.find(country => country.altSpellings[0].toLowerCase() === countryCode);
-  
+      const matchingCountry = countriesData.find(
+        (country) => country.altSpellings[0].toLowerCase() === countryCode
+      );
+
       if (matchingCountry) {
       } else {
-          console.error("No match found.");
+        console.error("No match found.");
       }
-  
-      renderNamazTimings(Namaz_Obj.data.timings,matchingCountry);
+
+      renderNamazTimings(Namaz_Obj.data.timings, matchingCountry);
     } catch (error) {
       console.error(error);
     }
   };
-  
-  const renderNamazTimings = function (Namaz_times,matchingCountry) {
-    Salah_Time.textContent = `${matchingCountry.flag} ${getSensableSubRegion()} ${selectedLocation.address.country}`;
+
+  const renderNamazTimings = function (Namaz_times, matchingCountry) {
+    Salah_Time.textContent = `${
+      matchingCountry.flag
+    } ${getSensableSubRegion()} ${selectedLocation.address.country}`;
     prayer_list.innerHTML = `
               <li class="prayer-item">
                 <span class="prayer-name">Fajr</span>
@@ -118,24 +120,24 @@ document.addEventListener('menuLoaded', function() {
               </li>
     `;
   };
-  
+
   const showNamazTiming = function () {
     document.getElementById("map").style.display = "none";
     closeMapButton.style.display = "none";
     countries.value = "default";
     prayer_list.style.display = "flex";
   };
-  
+
   (async function () {
     try {
       const storageKey = "countriesData";
       countriesData = localStorage.getItem(storageKey);
       if (countriesData) {
         countriesData = JSON.parse(countriesData);
-        const savedLocationString = localStorage.getItem('selectedLocation');
-        if(savedLocationString){
+        const savedLocationString = localStorage.getItem("selectedLocation");
+        if (savedLocationString) {
           const savedLocation = JSON.parse(savedLocationString);
-          Namaz_Timing(savedLocation.lat,savedLocation.lon);
+          Namaz_Timing(savedLocation.lat, savedLocation.lon);
           showNamazTiming();
         }
       } else {
@@ -158,7 +160,7 @@ document.addEventListener('menuLoaded', function() {
         attribution:
           '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(map);
-  
+
       map.on("click", (mapE) => {
         mapEvent = mapE;
         if (currentMarker) {
@@ -186,27 +188,27 @@ Location Set! You Can Close Now.
       console.error(error);
     }
   })();
-  
+
   const movMap = function (latlng) {
     map.setView(latlng, zoomLevel, {
       animate: true,
       pan: { duration: 1 },
     });
   };
-  
+
   countries.addEventListener("click", function () {
     if (this.value === "default" || !this.value) return;
     selectedLocation = countriesData[+this.value];
     movMap(selectedLocation.latlng);
     document.getElementById("map").style.display = "block";
+    window.dispatchEvent(new Event("resize")); // weird map behaviour. More Info At:
+    // https://laracasts.com/discuss/channels/code-review/leaflet-js-map-not-showing-fully-on-page-load
     closeMapButton.style.display = "block";
   });
-  
+
   closeMapButton.addEventListener("click", function () {
     document.getElementById("map").style.display = "none";
     closeMapButton.style.display = "none";
     countries.value = "default";
   });
-  
-})
-
+});
