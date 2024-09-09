@@ -196,7 +196,7 @@ Location Set! You Can Close Now.
     });
   };
 
-  countries.addEventListener("click", function () {
+  countries.addEventListener("change", function () {
     if (this.value === "default" || !this.value) return;
     document.getElementById("map").style.display = "block";
     selectedLocation = countriesData[+this.value];
