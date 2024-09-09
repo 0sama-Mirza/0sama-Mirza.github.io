@@ -160,7 +160,6 @@ document.addEventListener("menuLoaded", function () {
         attribution:
           '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(map);
-
       map.on("click", (mapE) => {
         mapEvent = mapE;
         if (currentMarker) {
@@ -183,6 +182,7 @@ Location Set! You Can Close Now.
         const { lat } = currentMarker._latlng;
         const { lng } = currentMarker._latlng;
         Namaz_Timing(lat, lng);
+        prayer_list.style.display = "flex";
       });
     } catch (error) {
       console.error(error);
@@ -198,12 +198,12 @@ Location Set! You Can Close Now.
 
   countries.addEventListener("click", function () {
     if (this.value === "default" || !this.value) return;
-    selectedLocation = countriesData[+this.value];
-    movMap(selectedLocation.latlng);
     document.getElementById("map").style.display = "block";
+    selectedLocation = countriesData[+this.value];
     window.dispatchEvent(new Event("resize")); // weird map behaviour. More Info At:
     // https://laracasts.com/discuss/channels/code-review/leaflet-js-map-not-showing-fully-on-page-load
     closeMapButton.style.display = "block";
+    movMap(selectedLocation.latlng);
   });
 
   closeMapButton.addEventListener("click", function () {

@@ -220,7 +220,7 @@ opacity: 0;
 
 .prayer-list{
   list-style-type: none;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-content: space-between;
   padding: 0;

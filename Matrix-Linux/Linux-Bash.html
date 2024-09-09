@@ -42,7 +42,7 @@
                     <div class="maintopics">
                         <h2 class="linuxboxitems">My Own Bash Promt:</h2>
                     </div>
-					<div class="bash-prompt"><pre>
+					<div class="bash-prompt"><pre><code>
 # get current branch in git repo
 function parse_git_branch() {
   BRANCH=`git branch 2&gt; /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
@@ -91,7 +91,7 @@ function parse_git_dirty {
 }
 
 # export PS1="\`parse_git_branch\` "
-PS1="\[\033[35m\]\D{%I:%M %p} \[\e[33m\][\[\033[32m\]\u\[\033[m\]@\[\033[32m\]\h \[\033[32;1m\]\w\[\e[33m\]]\[\e[00m\]\`parse_git_branch\`\n$\[\033[0m\] "</pre><button id="copyButton">Copy All</button></div>	
+PS1="\[\033[35m\]\D{%I:%M %p} \[\e[33m\][\[\033[32m\]\u\[\033[m\]@\[\033[32m\]\h \[\033[32;1m\]\w\[\e[33m\]]\[\e[00m\]\`parse_git_branch\`\n$\[\033[0m\] "</code></pre><button id="copyButton">Copy All</button></div>	
 <script>
     document.getElementById("copyButton").addEventListener("click", function() {
         var bashContent = document.querySelector('.bash-prompt pre');
