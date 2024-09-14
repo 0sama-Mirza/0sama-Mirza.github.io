@@ -240,3 +240,77 @@ opacity: 0;
   /* color: #555;  */
   color: var(--Dark-before);
 }
+
+table {
+    font-family: Arial, sans-serif;
+    color: white;
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    white-space: pre-wrap;
+    border: 1px solid var(--Dark-border);
+    text-align: center;
+}
+th {
+    background-color: rgb(23, 23, 23);
+}
+
+details {
+    margin: 5px;
+    font-size: 18px;
+  }
+  details > * {
+    padding: .65rem;
+  }
+  details > div {
+    background: #272727;
+    border-radius: 0 0 5px 5px;
+  }
+  summary {
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #fff;
+    background: var(--Dark-border);
+    cursor: pointer;
+  }
+  details[open] summary {
+    border-radius: 5px 5px 0 0;
+  }
+
+  /* Flexbox layout for time and subject */
+  .time-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+  }
+
+  .time-row p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .time {
+    font-weight: bold;
+    color: #a9a9a9;
+  }
+
+  .subject {
+    flex: 2;
+    text-align: right;
+    color: yellow;
+  }
+
+  /* Add line under each row */
+  .time-row {
+    border-bottom: 1px solid #444;
+    padding: 10px 0;
+  }
+
+  .time-row:last-child {
+    border-bottom: none; /* Remove the line for the last item */
+  }
+  
