@@ -8,18 +8,20 @@
     --Dark-listhead: rgb(255, 230, 0);
     --Dark-menuitem: rgb(0, 255, 0);
     --Dark-Footer-Text: yellow;
+    --Time-Table-Th: rgb(23, 23, 23);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .Dark-Theme{
     --Dark-BackGround: 0;
     --Dark-h1: 0;
     --Dark-int: 0;
-    --Dark-border: 0;
+    --Dark-border: black;
     --Dark-before: rgb(0, 0, 0);
     --Dark-li: 0;
     --Dark-listhead: 0;
     --Dark-menuitem: 0;
     --Dark-Footer-Text: 0;
+    --Time-Table-Th: #f2f2f2;
 }
 
 body{
@@ -243,7 +245,8 @@ opacity: 0;
 
 table {
     font-family: Arial, sans-serif;
-    color: white;
+    /* color: white; */
+    color: var(--Dark-before);
     width: 100%;
     border-collapse: collapse;
 }
@@ -253,7 +256,7 @@ th, td {
     text-align: center;
 }
 th {
-    background-color: rgb(23, 23, 23);
+    background-color: var(--Time-Table-Th);
 }
 
 details {
@@ -264,7 +267,7 @@ details {
     padding: .65rem;
   }
   details > div {
-    background: #272727;
+    /* background: #272727; */
     border-radius: 0 0 5px 5px;
   }
   summary {
@@ -295,13 +298,13 @@ details {
 
   .time {
     font-weight: bold;
-    color: #a9a9a9;
+    /* color: #a9a9a9; */
   }
 
   .subject {
     flex: 2;
     text-align: right;
-    color: yellow;
+    color: var(--Dark-Footer-Text);
   }
 
   /* Add line under each row */
