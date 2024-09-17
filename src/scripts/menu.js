@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         // Set the correct path prefix based on the current file
         let pathPrefix = isInIndex ? 'src/pages/home/' : './';
 		pathPrefix = isInMatrix ? '../home/' : pathPrefix;
-		homePath = isInIndex ? './' : '../../../';
+		let homePath = isInIndex ? './' : '../../../';
 
         menu.innerHTML = `
             <section>
