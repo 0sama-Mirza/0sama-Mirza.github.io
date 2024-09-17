@@ -157,7 +157,7 @@ code {
     padding-left: 20px;
     max-height: 30px;
     border: 1px solid var(--Dark-li);
-    background-image: url(images/Backgrounds/num.gif);
+    background-image: url(../../images/Backgrounds/num.gif);
 }
 .top-image:hover{
 opacity: 0;
