@@ -7,22 +7,26 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         // Determine if the current file is in the "Matrix" folder
         const isInMatrix = currentFile.startsWith("Linux-");
-
+		const isInIndex = currentFile.startsWith("index");
+		
         // Set the correct path prefix based on the current file
-        const pathPrefix = isInMatrix ? '../' : './';
+        let pathPrefix = isInIndex ? 'src/pages/home/' : './';
+		pathPrefix = isInMatrix ? '../home/' : pathPrefix;
+		homePath = isInIndex ? './' : '../../../';
 
         menu.innerHTML = `
             <section>
 				<h3 class="listhead" style="margin-top: 15px;">Explore!</h3>
                 <nav>
                     <ul>
-                        <li style="list-style-type: '🏠 ';"><a class="menuitem" href="${pathPrefix}index.html">Home</a></li>
-                        <li style="list-style-image: url('${pathPrefix}images/icons/School-Bag-Book.gif');"><a class="menuitem" href="${pathPrefix}University.html">University Stuff</a></li>
+                        <li style="list-style-type: '🏠 ';"><a class="menuitem" href="${homePath}index.html">Home</a></li>
+                        <li style="list-style-image: url('${homePath}images/icons/School-Bag-Book.gif');"><a class="menuitem" href="${pathPrefix}University.html">University Stuff</a></li>
                         <li style="list-style-type: '📕 ';"><a class="menuitem" href="${pathPrefix}helpfulresources.html">Helpful Resources</a></li>
                         <li style="list-style-type: '🐧 ';"><a class="menuitem" href="${pathPrefix}About-Linux.html">Me Using GNU/Linux</a></li>
                         <li style="list-style-type: '🎮 ';"><a class="menuitem" href="${pathPrefix}Gaming.html">Me Gaming</a></li>
+						<li style="list-style-type: '📖 ';"><a class="menuitem" href="${pathPrefix}Guestbook.html">Guest Book</a></li>
                     </ul>
-                    <a style="margin-left: 7%;" href="https://decolonizepalestine.com/" target="_blank"><img alt="88x31 button that says Stand with Palestine" src="${pathPrefix}images/Buttons/standwithFalasteen.png"></a>
+                    <a style="margin-left: 7%;" href="https://decolonizepalestine.com/" target="_blank"><img alt="88x31 button that says Stand with Palestine" src="${homePath}images/Buttons/standwithFalasteen.png"></a>
                 </nav>
             </section>
             <section class="prayer-timing">

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="icon" type="image/x-icon" href="../images/icons/favicon-H.ico">
+	<link rel="icon" type="image/x-icon" href="../../../images/icons/favicon-H.ico">
 
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
 	integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -12,21 +12,21 @@
 	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
 	integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
 	crossorigin=""></script>
-	<script src="../Script/namaz-timing.js" defer></script>
+	<script src="../../scripts/namaz-timing.js" defer></script>
 
-	<link rel="stylesheet" href="Matrix-Style.css">
-	<script src="../Script/footer.js" defer></script>
-	<script src="../Script/menu.js" defer></script>
+	<link rel="stylesheet" href="../../styles/Matrix-Style.css">
+	<script src="../../scripts/footer.js" defer></script>
+	<script src="../../scripts/menu.js" defer></script>
 	<title>Osama Using GNU/Linux</title>
 </head>
 <body>
     <canvas id="Matrix"></canvas>
-    <script src="Matrix-Script.js"></script>
+    <script src="../../scripts/Matrix-Script.js"></script>
 	<main>
 		<header>
 			<h1>0sama's Website!</h1>
 			<div>
-				<img src="../images/Backgrounds/GNU-vs.-GNULinux.png" alt="GNU/Linux" style="width: 40%; margin-bottom: -9%; margin-left: 30%; object-fit: fill;">
+				<img src="../../../images/Backgrounds/GNU-vs.-GNULinux.png" alt="GNU/Linux" style="width: 40%; margin-bottom: -9%; margin-left: 30%; object-fit: fill;">
 			</div>
 		</header>
 		<div class="flexposition">
@@ -41,54 +41,54 @@
 					<!-- The Animation Was Taken From SadGal online -->
 					<!-- https://sadgrl.online/webmastery/downloads/tiledbgs -->
                     <ul>
-						<li style="list-style-image: url('../images/icons/Duck-TV.gif');"><p class="listhead" style="color: white;">For Downloading Seperate Chapters In A Video:</p>
+						<li style="list-style-image: url('../../../images/icons/Duck-TV.gif');"><p class="listhead" style="color: white;">For Downloading Seperate Chapters In A Video:</p>
 							<pre><code>
 yt-dlp --embed-metadata --split-chapters $URL
 OR:
 yt-dlp --embed-chapters --split-chapters $URL
 							</code></pre>
 						</li>
-						<li style="list-style-image: url('../images/icons/Windows-TV.gif');"><p class="listhead" style="color: white;">Best Download Speed(Needs aria2 and yt-dlp maybe):</p>
+						<li style="list-style-image: url('../../../images/icons/Windows-TV.gif');"><p class="listhead" style="color: white;">Best Download Speed(Needs aria2 and yt-dlp maybe):</p>
 							<pre><code>
 youtube-dl --external-downloader=aria2c --external-downloader-args '--min-split-size=1M --max-connection-per-server=16 --max-concurrent-downloads=16 --split=16' $URL
 							</code></pre>
 						</li>
-						<li style="list-style-image: url('../images/icons/Small-Radio.gif');"><p class="listhead" style="color: white;">For Extracting audio.:</p>
+						<li style="list-style-image: url('../../../images/icons/Small-Radio.gif');"><p class="listhead" style="color: white;">For Extracting audio.:</p>
 							<pre><code>
 youtube-dl --extract-audio --audio-format mp3 $URL
 							</code></pre>
 						</li>
-						<li style="list-style-image: url('../images/icons/Small-Laptop.gif');"><p class="listhead" style="color: white;">For Adding Thimbnail and Metadata.:</p>
+						<li style="list-style-image: url('../../../images/icons/Small-Laptop.gif');"><p class="listhead" style="color: white;">For Adding Thimbnail and Metadata.:</p>
 							<pre><code>
 yt-dlp --extract-audio --audio-format best --embed-thumbnail --add-metadata $URL
 							</code></pre>
 						</li>
-						<li style="list-style-image: url('../images/icons/Duck-TV.gif');"><p class="listhead" style="color: white;">For extracting actual video url. The first one is the Video while the second one is the audio.:</p>
+						<li style="list-style-image: url('../../../images/icons/Duck-TV.gif');"><p class="listhead" style="color: white;">For extracting actual video url. The first one is the Video while the second one is the audio.:</p>
 							<pre><code>
 youtube-dl -g
 							</code></pre>
 						</li>
-						<li style="list-style-image: url('../images/icons/Pink-TV.gif');"><p class="listhead" style="color: white;">Using ffmpeg to cut the video.:</p>
+						<li style="list-style-image: url('../../../images/icons/Pink-TV.gif');"><p class="listhead" style="color: white;">Using ffmpeg to cut the video.:</p>
 							<pre><code>
 ffmpeg -ss 08:51 -to 69:24 -i "(URL)" -ss 08:51 -to 69:24 -i "(URL) -c copy -avoid_negative_ts make_zero nameofthefile.mp4
 							</code></pre>
 						</li>
-						<li style="list-style-image: url('../images/icons/Duck-TV.gif');"><p class="listhead" style="color: white;">For Downloading Thumbnail.:</p>
+						<li style="list-style-image: url('../../../images/icons/Duck-TV.gif');"><p class="listhead" style="color: white;">For Downloading Thumbnail.:</p>
 							<pre><code>
 youtube-dl --write-thumbnail --skip-download $URL
 							</code></pre>
 						</li>
-						<li style="list-style-image: url('../images/icons/Windows-TV.gif');"><p class="listhead" style="color: white;">For Mearging Audio and Video:</p>
+						<li style="list-style-image: url('../../../images/icons/Windows-TV.gif');"><p class="listhead" style="color: white;">For Mearging Audio and Video:</p>
 							<pre><code>
 ffmpeg -i (Video Name).mp4 -i (Audio Name).mp3 -c:v -c:a copy output.mp4
 							</code></pre>
 						</li>
-						<li style="list-style-image: url('../images/icons/Pink-TV.gif');"><p class="listhead" style="color: white;">Convert .webm into .mp4:</p>
+						<li style="list-style-image: url('../../../images/icons/Pink-TV.gif');"><p class="listhead" style="color: white;">Convert .webm into .mp4:</p>
 							<pre><code>
 ffmpeg -i 1.webm -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" dsa.mp4
 							</code></pre>
 						</li>
-						<li style="list-style-image: url('../images/icons/Duck-TV.gif');"><p class="listhead" style="color: white;">Write Subtitles:</p>
+						<li style="list-style-image: url('../../../images/icons/Duck-TV.gif');"><p class="listhead" style="color: white;">Write Subtitles:</p>
 							<pre><code>
 --write-subs 
 							</code></pre>
