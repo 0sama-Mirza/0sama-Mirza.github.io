@@ -1,7 +1,7 @@
 const isInIndex = window.location.pathname.split('/').pop().startsWith("index");
 		
 // Set the correct path prefix based on the current file
-let pathPrefix = isInIndex ? './' : '../../';
+let pathPrefix = isInIndex ? './' : '../../../';
 
 let icon = document.getElementById("icon");
 
