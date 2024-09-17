@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         // Determine if the current file is in the "Matrix" folder
         const isInMatrix = currentFile.startsWith("Linux-");
-		const isInIndex = currentFile.startsWith("index") || currentFile.startsWith("");
+		const isInIndex = currentFile.startsWith("index") || (currentFile.length===0);
 		
         // Set the correct path prefix based on the current file
         let pathPrefix = isInIndex ? 'src/pages/home/' : './';
