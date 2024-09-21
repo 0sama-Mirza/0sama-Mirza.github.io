@@ -2,13 +2,17 @@ html,
 body {
   width: 100%;
   height: 100%;
+  margin: 0px;
+}
+
+body {
   background: url("https://img.freepik.com/premium-photo/3d-rendering-welding-robotic-arms-with-blank-space-white-background_493806-7833.jpg?w=826")
     center fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin: 0px;
 }
+
 body.disco {
   transition: background-color 0.5s;
 }
@@ -73,15 +77,21 @@ h1 {
 .right_arm {
   margin-left: 10px;
 }
-.right_arm:hover,
-.left_arm:hover {
-  /* transform: rotate(360deg); */
-  /* transition: 1s ease-in-out; */
+.right_arm:hover {
   -webkit-transform: rotate(20deg);
   -moz-transform: rotate(20deg);
   -o-transform: rotate(20deg);
   -ms-transform: rotate(20deg);
   transform: rotate(20deg);
+}
+.left_arm:hover {
+  /* transform: rotate(360deg); */
+  /* transition: 1s ease-in-out; */
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
 }
 .torso {
   width: 200px;
@@ -193,4 +203,73 @@ h1 {
 footer {
   margin-top: auto;
   text-align: center;
+}
+
+@keyframes danceArmRight {
+  0%,
+  100% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes danceArmLeft {
+  0%,
+  100% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes danceLeg {
+  0%,
+  100% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+}
+
+
+@keyframes beatEffect {
+  0%,
+  100% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(1.04); /* Increased size (20% larger) */
+    
+  }
+}
+
+
+.beat {
+  animation: beatEffect 0.2s infinite;
+}
+
+
+.dance-arms-right {
+  /* animation: danceArmRight 0.3s infinite; */
+  transform: rotate(20deg) scale(1.1);
+}
+.dance-arms-left {
+  /* animation: danceArmLeft 0.3s infinite; */
+  transform: rotate(-20deg) scale(1.1);
+}
+
+.dance-left-leg {
+  animation: danceLeg 0.3s infinite;
+}
+
+.dance-right-leg {
+  animation: danceLeg 0.3s infinite;
+}
+
+.enlarge{
+  height: 125px;
 }
