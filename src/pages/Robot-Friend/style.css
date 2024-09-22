@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Press_Start_2P"; 
+    src: url("../../../fonts/Press_Start_2P/PressStart2P-Regular.ttf") format("truetype");
+}
+
+:root{
+  font-family: "Press_Start_2P";
+}
 html,
 body {
   width: 100%;
