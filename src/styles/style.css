@@ -96,8 +96,8 @@ h1{
     display: flex;
     flex-wrap: wrap;
     gap: 1%;
-    margin-left: 10%;
     margin-top: 1%;
+    justify-content: center;
 }
 
 .linxmenu{
