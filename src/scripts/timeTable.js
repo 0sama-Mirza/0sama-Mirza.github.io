@@ -13,7 +13,7 @@ const handleMediaQueryChange = function (e) {
     <div>
       <div class="time-row">
         <p class="time">08:00 - 09:20</p>
-        <p class="subject">N/A</p>
+        <p class="subject"><strong>Final Year Project-II</strong><br>B-110</p>
       </div>
       <div class="time-row">
         <p class="time">09:20 - 12:00</p>
@@ -47,7 +47,7 @@ const handleMediaQueryChange = function (e) {
       </div>
       <div class="time-row">
         <p class="time">10:40 - 12:00</p>
-        <p class="subject"><strong>Final Year Project-II</strong><br>B-202</p>
+        <p class="subject"><strong>Machine Learning</strong><br>B-202</p>
       </div>
       <div class="time-row">
         <p class="time">12:00 - 01:20</p>
@@ -85,7 +85,7 @@ const handleMediaQueryChange = function (e) {
       </div>
       <div class="time-row">
         <p class="time">02:40 - 04:00</p>
-        <p class="subject"><strong>Machine Learning</strong><br>B-202</p>
+        <p class="subject"><strong></strong><br></p>
       </div>
     </div>
   </details>
@@ -115,7 +115,7 @@ const handleMediaQueryChange = function (e) {
       </div>
       <div class="time-row">
         <p class="time">02:40 - 04:00</p>
-        <p class="subject"><strong>Ethics</strong><br>B-206</p>
+        <p class="subject"><strong>Ethics</strong><br>B-110</p>
       </div>
     </div>
   </details>
@@ -143,7 +143,7 @@ const handleMediaQueryChange = function (e) {
     </tr>
     <tr>
         <th>Monday</th>
-        <td></td>
+        <td><strong class="subject">Final Year Project-II</strong><br>B-110</td>
         <td colspan="2"><strong class="subject">Parallel and Distributed Computing Lab</strong><br>Signal &amp Image Processing(CE)</td>
         <td><strong class="subject">Class Advisor</strong><br>B-203</td>
         <td></td>
@@ -153,7 +153,7 @@ const handleMediaQueryChange = function (e) {
         <th>Tuesday</th>
         <td><strong class="subject">Data Base Systems</strong><br>B-202</td>
         <td><strong class="subject">Data Base Systems</strong><br>B-110</td>
-        <td><strong class="subject">Final Year Project-II</strong><br>B-202</td>
+        <td><strong class="subject">Machine Learning</strong><br>B-202</td>
         <td><strong class="subject">Applied Robotics</strong><br>Computer Systems Design</td>
         <td><strong class="subject">Parallel and Distributed Computing</strong><br>B-107</td>
         <td></td>
@@ -164,7 +164,7 @@ const handleMediaQueryChange = function (e) {
         <td colspan="2" data-label="Time"><strong class="subject">Data Base Systems Lab</strong><br>Computer Systems Design(CE)</td>
         <td><strong class="subject">Applied Robotics</strong><br>B-106</td>
         <td></td>
-        <td><strong class="subject">Machine Learning</strong><br>B-202</td>
+        <td></td>
     </tr>
     <tr>
         <th>Thursday</th>
@@ -173,7 +173,7 @@ const handleMediaQueryChange = function (e) {
         <td><strong class="subject">Machine Learning</strong><br>B-106</td>
         <td></td>
         <td><strong class="subject">Ethics</strong><br>B-110</td>
-        <td><strong class="subject">Ethics</strong><br>B-206</td>
+        <td><strong class="subject">Ethics</strong><br>B-110</td>
     </tr>
     <tr>
         <th>Friday</th>
