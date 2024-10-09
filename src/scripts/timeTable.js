@@ -85,7 +85,7 @@ const handleMediaQueryChange = function (e) {
       </div>
       <div class="time-row">
         <p class="time">02:40 - 04:00</p>
-        <p class="subject"><strong></strong><br></p>
+        <p class="subject">N/A</p>
       </div>
     </div>
   </details>
