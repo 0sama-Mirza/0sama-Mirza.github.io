@@ -59,6 +59,23 @@ document.addEventListener("menuLoaded", function () {
 
   const Namaz_Timing = async function (lat, lng) {
     try {
+      const currentDate = getCurrentDate();
+      // Check if namazData exists in localStorage
+      const storedNamazDataString = localStorage.getItem("namazData");
+      const storedNamazData = storedNamazDataString
+        ? JSON.parse(storedNamazDataString)
+        : null;
+      // If namazData exists and the date matches, use the stored data
+      if (storedNamazData && storedNamazData.date === currentDate) {
+        renderNamazTimings(
+          storedNamazData.timings,
+          storedNamazData.flag,
+          storedNamazData.subRegion,
+          storedNamazData.country,
+          true
+        );
+        return;
+      }
       const Namaz_Obj = await getJSON(
         `https://api.aladhan.com/v1/timings/${getCurrentDate()}?latitude=${lat}&longitude=${lng}&method=4&school=1&adjustment=1`,
         "Salah Timing Not Found!"
@@ -87,16 +104,16 @@ document.addEventListener("menuLoaded", function () {
         console.error("No match found.");
       }
 
-      renderNamazTimings(Namaz_Obj.data.timings, matchingCountry);
+      renderNamazTimings(Namaz_Obj.data.timings, matchingCountry.flag, getSensableSubRegion(),selectedLocation.address.country,false);
     } catch (error) {
       console.error(error);
     }
   };
 
-  const renderNamazTimings = function (Namaz_times, matchingCountry) {
+  const renderNamazTimings = function (Namaz_times, flag, subRegion, country,hmmm) {
     Salah_Time.textContent = `${
-      matchingCountry.flag
-    } ${getSensableSubRegion()} ${selectedLocation.address.country}`;
+      flag
+    } ${subRegion} ${country}`;
     prayer_list.innerHTML = `
               <li class="prayer-item">
                 <span class="prayer-name">Fajr</span>
@@ -119,6 +136,16 @@ document.addEventListener("menuLoaded", function () {
                 <span class="prayer-time">${Namaz_times.Isha}</span>
               </li>
     `;
+    if(!hmmm){  
+      const namazData = {
+        date: getCurrentDate(),
+        subRegion: subRegion,
+        country: selectedLocation.address.country,
+        timings: Namaz_times,
+        flag: flag,
+      };
+      localStorage.setItem("namazData", JSON.stringify(namazData));
+    }
   };
 
   const showNamazTiming = function () {
