@@ -283,3 +283,7 @@ footer {
 .enlarge{
   height: 125px;
 }
+
+.hidden{
+  display: none;
+}

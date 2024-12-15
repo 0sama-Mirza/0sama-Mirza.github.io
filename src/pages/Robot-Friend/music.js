@@ -63,7 +63,7 @@ const startDisco = function () {
   if (count > 0) return;
   count++;
   document.body.style.background = "none";
-  document.querySelector("footer").innerHTML = "";
+  document.querySelector("footer").classList.add("hidden");
   const colors = ["red", "blue", "green", "yellow", "purple", "pink", "orange"];
   let colorIndex = 0;
   leftLeg.classList.toggle("dance-left-leg");
@@ -78,7 +78,6 @@ const startDisco = function () {
     leftArm.classList.toggle("dance-arms-left");
     rightArm.classList.toggle("dance-arms-right");
     document.body.style.backgroundColor = colors[colorIndex];
-    document.querySelector("footer").style.backgroundColor = colors[colorIndex];
     colorIndex = (colorIndex + 1) % colors.length;
   }, 150);
   audio.play();
@@ -90,7 +89,7 @@ const stopDisco = function () {
     'url("https://img.freepik.com/premium-photo/3d-rendering-welding-robotic-arms-with-blank-space-white-background_493806-7833.jpg?w=826") center center fixed no-repeat';
   document.body.style.backgroundSize = "cover";
 
-  document.querySelector("footer").style.backgroundColor = "";
+  document.querySelector("footer").classList.remove("hidden");
   audio.pause();
   audio.currentTime = 0;
   leftLeg.classList.remove("dance-left-leg");
@@ -102,14 +101,6 @@ const stopDisco = function () {
   head.classList.remove("enlarge");
   leftArm.classList.remove("dance-arms-left");
   rightArm.classList.remove("dance-arms-right");
-  document.querySelector("footer").innerHTML = `			
-              <hr style="width: 64%;">
-			  <p style="text-align: center;" 
-				 onclick="alert('EMAILING ME IS USELESS');">
-				 Email: osama.anees789@gmail.com
-			  </p>
-			  <div style="text-align:center;"><a  href="http://motherfuckingwebsite.com/"><span style="color: rgb(0, 0, 0);">Why Is My Web</span></a><a href="https://makefrontendshitagain.party/"><span style="color: rgb(0, 102, 255);">site So Simple?</span></a></div>
-			  <div style="display: flex; justify-content: space-between;"><a href="../../../index.html"><span style="text-align:left;color: rgb(0, 0, 0);">&larr;---------------Home</span></a><a href="../home/AIArt.html"><span style="text-align:right;color: rgb(0, 0, 0);">Cool Art---------------&rarr;</span></a></div>`;
 };
 
 // Sync the lyrics with the audio
