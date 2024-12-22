@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="../../../images/icons/favicon-H.ico">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+	integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+	crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+	integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+	crossorigin=""></script>
+	<script src="../../scripts/namaz-timing.js" defer></script>
+
+	<link rel="stylesheet" href="../../styles/Matrix-Style.css">
+    <script src="../../scripts/footer.js" defer></script>
+    <script src="../../scripts/menu.js" defer></script>
+	<title>Osama Using GNU/Linux</title>
+</head>
+<body>
+    
+    <canvas id="Matrix"></canvas>
+    <script src="../../scripts/Matrix-Script.js"></script>
+    <main>
+        <header>
+    	    <h1>0sama's Website!</h1>
+    	    <div>
+    	    	<img src="../../../images/Backgrounds/GNU-vs.-GNULinux.png" alt="GNU/Linux" style="width:40%; margin-bottom: -9%; margin-left: 30%;object-fit:fill;">
+    	    </div>
+        </header>
+    	<div class="flexposition">
+    		<div class="MainNoticeBoard">
+                <section>
+                    <h2 class="h1alt">How To Mount Remote Drives</h2>
+                </section>
+                    <div class="maintopics">
+                        <h2 class="linuxboxitems">Why we need it</h2>
+                    </div>
+                    <p>Lets say you have 2 different computers (Laptop, Desktop). 
+                       Your desktop has alot of storage while your laptop's storage is limited. 
+                       Wouldn't it be better to just store all your media(Videos, Images, Music etc..) 
+                       to your desktop and keep your laptop clean? Like a local google drive.
+                       (Note: This Tutorial Is Only For Linux Devices)
+                    </p>
+                <section class="Explain">
+                    <div class="maintopics">
+                        <h2 class="linuxboxitems">Installation</h2>
+                    </div>
+                    <p>First you need to install these packages:</p>
+                    <ol>
+                        <li>
+                            <span class="textW">
+                                <a style="color: rgb(0, 255, 0);" href="https://www.openssh.com/">Openssh</a>
+                            </span>
+                            <ul>
+                                <li><a style="color:RGB(23, 147, 209)" href="https://wiki.archlinux.org/title/OpenSSH">Arch:</a>
+                                    <ul>
+                                        <li><code>sudo pacman -S openssh</code></li>
+                                    </ul>
+                                </li>
+                                <li><a style="color: RGB(168, 29, 51);" href="https://wiki.debian.org/SSH">Debian:</a>
+                                    <ul>
+                                        <li><code>sudo apt-get install openssh-server</code></li>
+                                        <li><code>sudo apt-get install openssh-client</code></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="textW">
+                                <a style="color: rgb(0, 255, 0);" href="https://github.com/libfuse/sshfs">SSHFS</a>
+                            </span>
+                            <ul>
+                                <li><a style="color:RGB(23, 147, 209)" href="https://wiki.archlinux.org/title/SSHFS">Arch:</a>
+                                    <ul>
+                                        <li><code>sudo pacman -S sshfs</code></li>
+                                    </ul>
+                                </li>
+                                <li><a style="color: RGB(168, 29, 51);" href="https://manpages.debian.org/unstable/sshfs/sshfs.1.en.html#:~:text=DESCRIPTION,permissions%20are%20ignored%20by%20SSHFS.">Debian:</a>
+                                    <ul>
+                                        <li><code>sudo apt-get install sshfs</code></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                    
+                    
+                </section>
+                <section class="Explain">
+                    <div class="maintopics">
+                        <h2 class="linuxboxitems">Initial Setup (Remote Machine)</h2>
+                    </div>
+                    <p>Run the SSH server on your remote machine(The Machine With More Storage) by:</p>
+                    <ul>
+                        <li>
+                            <code>sudo systemctl start sshd</code>
+                        </li>
+                    </ul>
+                    <p>To make it automatically run when the machine starts up do:</p>
+                    <ul>
+                        <li>
+                            <code>sudo systemctl enable sshd</code>
+                        </li>
+                    </ul>
+
+                    <p>To get the local IP address of the remote machine, you can use the following command:</p>
+                    <ul>
+                        <li>
+                            <code>ip -4 addr show | grep inet</code>
+                            <br><br>
+                            <strong>Sample Output:</strong>
+                            <div style="padding: 10px; font-family: monospace;">
+                                inet 127.0.0.1/8 scope host lo<br>
+                                inet 192.168.100.20/24 brd 192.168.100.255 scope global dynamic noprefixroute eno1
+                            </div>
+                            <p>
+                                In this example, the local IP address is:
+                                <strong>192.168.100.20</strong>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <p>Just to check if everything is right, on your client machine(Laptop) <strong>ping</strong> the remote machine by:</p>
+                    <ul>
+                        <li>
+                            <code>ping 192.168.100.20</code><br>
+                            - replace with your ip. <br>
+                            - If this is not working recheck your ip address and make sure they are on the same local network.  
+                        </li>
+                    </ul>
+                    
+                    <p>If you have firewall installed then you need to allow sshfs to establish the connection. By default openssh will run on the TCP port 22. To allow the connection run these commands:</p>
+                    <ul>
+                        <li><code>sudo ufw allow 22/tcp</code></li>
+                        <li><code>sudo ufw allow out 22/tcp</code></li>
+                    </ul>
+                    <p>These commands are for <a style="color:rgb(0, 255, 0);" href ="https://wiki.archlinux.org/title/Uncomplicated_Firewall">ufw</a>(Uncomplicated Firewall). If you are using something else then just do the same there.</p>
+                    <div class="maintopics">
+                        <h2 class="linuxboxitems">Initial Setup (Client Machine)</h2>
+                    </div>
+                    <p>First make a directory where you will mount the remote drive. I will make my directory in <strong>"/mnt"</strong>:</p>
+                    <ul><li><code>sudo mkdir /mnt/Archmax</code></li></ul>
+                    
+                    <p>Then I will edit the firewall rules just like I previously did:</p>
+                    <ul>
+                        <li><code>sudo ufw allow 22/tcp</code></li>
+                        <li><code>sudo ufw allow out 22/tcp</code></li>
+                    </ul>
+                    
+                    <p>Since we are working in the <strong>/mnt</strong> directory, we need to change the ownership of the directory to the current user. You can do this by running the following commands:</p>
+                    <ul>
+                        <li>Use the generic syntax:<br>
+                            <code>sudo chown &lt;user&gt;:&lt;group&gt; &lt;directory&gt;</code>
+                        </li>
+                        <li>For your current user and group, you can dynamically set the ownership using:<br>
+                            <code>sudo chown $(whoami):$(id -gn) /mnt/Archmax</code><br>
+                            - Replace <strong>"Archmax"</strong> to your desired name.
+                        </li>
+                    </ul>
+                    
+                </section>
+                <section>
+                    <div class="maintopics">
+                        <h2 class="linuxboxitems">Mounting The Drive</h2>
+                    </div>
+                    <p>Now on your client (Laptop), you will use sshfs to mount the remote drive. The general command for it is:</p>
+                    <ul>
+                        <li><code>sudo sshfs &lt;remote_user&gt;@&lt;remote_host_ip&gt;:&lt;remote_directory&gt; &lt;local_mount_point&gt;</code></li>
+                    </ul>
+                    <p>For example:</p>
+                    <ul>
+                        <li><code>sudo sshfs archmax@192.168.100.20:/home/archmax /mnt/Archmax/</code></li>
+                    </ul>
+                    <p>Now you can see your Desktop's home folder inside you Laptop. You can even use a file manager to graphically browse it.</p>
+                </section>
+                <section>
+                    <div class="maintopics">
+                        <h2 class="linuxboxitems">Troubleshooting</h2>
+                    </div>
+                    <p>If the <code>sshfs</code> command does not mount the drive, you can try the following command:</p>
+                    <ul>
+                        <li><code>sudo sshfs -o allow_other,uid=1000,gid=1000 &lt;remote_user&gt;@&lt;remote_host_ip&gt;:&lt;remote_directory&gt; &lt;local_mount_point&gt;</code></li>
+                    </ul>
+
+                    <p>For example:</p>
+                    <ul><li><code>sudo sshfs -o allow_other,uid=1000,gid=1000 archmax@192.168.100.20:/home/archmax/ /mnt/Archmax/</code></li></ul>
+                    
+                    <p>In this command, I added the following options:</p>
+                    <ul>
+                        <li><code>-o allow_other</code>: Allows other users on the client system to access the mounted filesystem.</li>
+                        <li><code>uid=1000</code>: Specifies the user ID to map the remote files to (in this case, user ID 1000).</li>
+                        <li><code>gid=1000</code>: Specifies the group ID to map the remote files to (in this case, group ID 1000).</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="menu">
+            </div>
+        </div>
+    </main>
+<footer>
+</footer>
+</body>
+</html>
