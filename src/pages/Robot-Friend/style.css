@@ -59,7 +59,6 @@ h1 {
 }
 .eyes {
   display: flex;
-  justify-content: stretch;
 }
 .head:hover {
   height: 125px;
