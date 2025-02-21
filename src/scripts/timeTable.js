@@ -12,24 +12,7 @@ const handleMediaQueryChange = function (e) {
     <summary>Monday</summary>
     <div>
       <div class="time-row">
-        <p class="time">08:00 - 09:20</p>
-        <p class="subject"><strong>Final Year Project-II</strong><br>B-110</p>
-      </div>
-      <div class="time-row">
-        <p class="time">09:20 - 12:00</p>
-        <p class="subject"><strong>Parallel and Distributed Computing Lab</strong><br>Signal & Image Processing (CE)</p>
-      </div>
-      <div class="time-row">
-        <p class="time">12:00 - 01:20</p>
-        <p class="subject"><strong>Class Advisor</strong><br>B-203</p>
-      </div>
-      <div class="time-row">
-        <p class="time">01:20 - 02:40</p>
-        <p class="subject">N/A</p>
-      </div>
-      <div class="time-row">
-        <p class="time">02:40 - 04:00</p>
-        <p class="subject"><strong>Parallel and Distributed Computing</strong><br>B-105</p>
+        <p class="time">No classes scheduled</p>
       </div>
     </div>
   </details>
@@ -39,27 +22,27 @@ const handleMediaQueryChange = function (e) {
     <div>
       <div class="time-row">
         <p class="time">08:00 - 09:20</p>
-        <p class="subject"><strong>Data Base Systems</strong><br>B-202</p>
+        <p class="subject">N/A</p>
       </div>
       <div class="time-row">
         <p class="time">09:20 - 10:40</p>
-        <p class="subject"><strong>Data Base Systems</strong><br>B-110</p>
+        <p class="subject">N/A</p>
       </div>
       <div class="time-row">
         <p class="time">10:40 - 12:00</p>
-        <p class="subject"><strong>Machine Learning</strong><br>B-202</p>
+        <p class="subject"><strong>Wireless Communication</strong><br>B-202</p>
       </div>
       <div class="time-row">
         <p class="time">12:00 - 01:20</p>
-        <p class="subject"><strong>Applied Robotics</strong><br>Computer Systems Design (CE)</p>
+        <p class="subject"><strong>Software Engineering</strong><br>B-106</p>
       </div>
       <div class="time-row">
         <p class="time">01:20 - 02:40</p>
-        <p class="subject"><strong>Parallel and Distributed Computing</strong><br>B-107</p>
+        <p class="subject"><strong>Class Advisor</strong><br>B-108</p>
       </div>
       <div class="time-row">
         <p class="time">02:40 - 04:00</p>
-        <p class="subject">N/A</p>
+        <p class="subject"><strong>Foreign Language French</strong><br>B-203</p>
       </div>
     </div>
   </details>
@@ -69,23 +52,27 @@ const handleMediaQueryChange = function (e) {
     <div>
       <div class="time-row">
         <p class="time">08:00 - 09:20</p>
-        <p class="subject">N/A</p>
+        <p class="subject"><strong>Final Year Project 3</strong><br>B-107</p>
       </div>
       <div class="time-row">
-        <p class="time">09:20 - 12:00</p>
-        <p class="subject"><strong>Data Base Systems Lab</strong><br>Computer Systems Design (CE)</p>
+        <p class="time">09:20 - 10:40</p>
+        <p class="subject"><strong>Wireless Communication</strong><br>B-202</p>
+      </div>
+      <div class="time-row">
+        <p class="time">10:40 - 12:00</p>
+        <p class="subject">N/A</p>
       </div>
       <div class="time-row">
         <p class="time">12:00 - 01:20</p>
-        <p class="subject"><strong>Applied Robotics</strong><br>B-106</p>
+        <p class="subject">N/A</p>
       </div>
       <div class="time-row">
         <p class="time">01:20 - 02:40</p>
-        <p class="subject">N/A</p>
+        <p class="subject"><strong>Engineering Management &amp Enterpreneurship</strong><br>B-106</p>
       </div>
       <div class="time-row">
         <p class="time">02:40 - 04:00</p>
-        <p class="subject">N/A</p>
+        <p class="subject"><strong>Engineering Management &amp Enterpreneurship</strong><br>B-203</p>
       </div>
     </div>
   </details>
@@ -99,23 +86,23 @@ const handleMediaQueryChange = function (e) {
       </div>
       <div class="time-row">
         <p class="time">09:20 - 10:40</p>
-        <p class="subject"><strong>Tutorial</strong><br>B-108</p>
-      </div>
-      <div class="time-row">
-        <p class="time">10:40 - 12:00</p>
-        <p class="subject"><strong>Machine Learning</strong><br>B-106</p>
-      </div>
-      <div class="time-row">
-        <p class="time">12:00 - 01:20</p>
         <p class="subject">N/A</p>
       </div>
       <div class="time-row">
+        <p class="time">10:40 - 12:00</p>
+        <p class="subject"><strong>Software Engineering</strong><br>B-110</p>
+      </div>
+      <div class="time-row">
+        <p class="time">12:00 - 01:20</p>
+        <p class="subject"><strong>Conternporary International Relations</strong><br>B-106</p>
+      </div>
+      <div class="time-row">
         <p class="time">01:20 - 02:40</p>
-        <p class="subject"><strong>Ethics</strong><br>B-110</p>
+        <p class="subject"><strong>Conternporary International Relations</strong><br>B-105</p>
       </div>
       <div class="time-row">
         <p class="time">02:40 - 04:00</p>
-        <p class="subject"><strong>Ethics</strong><br>B-110</p>
+        <p class="subject"><strong>Foreign Language French</strong><br>B-110</p>
       </div>
     </div>
   </details>
@@ -142,47 +129,49 @@ const handleMediaQueryChange = function (e) {
         <th>02:40 - 04:00</th>
     </tr>
     <tr>
-        <th>Monday</th>
-        <td><strong class="subject">Final Year Project-II</strong><br>B-110</td>
-        <td colspan="2"><strong class="subject">Parallel and Distributed Computing Lab</strong><br>Signal &amp Image Processing(CE)</td>
-        <td><strong class="subject">Class Advisor</strong><br>B-203</td>
-        <td></td>
-        <td><strong class="subject">Parallel and Distributed Computing</strong><br>B-105</td>
+        <td><strong class="subject">C</strong></td>
+        <td><strong class="subject">H</strong></td>
+        <td><strong class="subject">U</strong></td>
+        <td><strong class="subject">T</strong></td>
+        <td><strong class="subject">I</strong></td>
+        <td><strong class="subject">E</strong></td>
     </tr>
     <tr>
         <th>Tuesday</th>
-        <td><strong class="subject">Data Base Systems</strong><br>B-202</td>
-        <td><strong class="subject">Data Base Systems</strong><br>B-110</td>
-        <td><strong class="subject">Machine Learning</strong><br>B-202</td>
-        <td><strong class="subject">Applied Robotics</strong><br>Computer Systems Design</td>
-        <td><strong class="subject">Parallel and Distributed Computing</strong><br>B-107</td>
         <td></td>
+        <td></td>
+        <td><strong class="subject">Wireless Communication</strong><br>B-202</td>
+        <td><strong class="subject">Software Engineering</strong><br>B-106</td>
+        <td><strong class="subject">Class Advisor</strong><br>B-106</td>
+        <td><strong class="subject">Foreign Language French</strong><br>B-203</td>
     </tr>
     <tr>
         <th>Wednesday</th>
+        <td><strong class="subject>Final Year Project 3</strong><br>B-107</td>
+        <td><strong class="subject">Wireless Communication</strong><br>B-202</td>
         <td></td>
-        <td colspan="2" data-label="Time"><strong class="subject">Data Base Systems Lab</strong><br>Computer Systems Design(CE)</td>
-        <td><strong class="subject">Applied Robotics</strong><br>B-106</td>
         <td></td>
-        <td></td>
+        <td><strong class="subject">Engineering Management &amp Enterpreneurship</strong><br>B-106</td>
+        <td><strong class="subject">Engineering Management &amp Enterpreneurship</strong><br>B-203</td>
+
     </tr>
     <tr>
         <th>Thursday</th>
         <td></td>
-        <td><strong class="subject">Tutorial</strong><br>B-108</td>
-        <td><strong class="subject">Machine Learning</strong><br>B-106</td>
         <td></td>
-        <td><strong class="subject">Ethics</strong><br>B-110</td>
-        <td><strong class="subject">Ethics</strong><br>B-110</td>
+        <td><strong class="subject"><strong>Software Engineering</strong><br>B-110</td>
+        <td><strong class="subject">Conternporary International Relations</strong><br>B-106</td>
+        <td><strong class="subject">Conternporary International Relations</strong><br>B-105</td>
+        <td><strong class="subject">Foreign Language French</strong><br>B-110</td>
     </tr>
     <tr>
         <th>Friday</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><strong class="subject">C</strong></td>
+        <td><strong class="subject">H</strong></td>
+        <td><strong class="subject">U</strong></td>
+        <td><strong class="subject">T</strong></td>
+        <td><strong class="subject">I</strong></td>
+        <td><strong class="subject">E</strong></td>
     </tr>
 </table>`;
   }
