@@ -118,7 +118,9 @@ const handleMediaQueryChange = function (e) {
 </div>
     `;
   } else {
-    timeTable.innerHTML = `<table>
+    timeTable.innerHTML = `
+    <div style="overflow-x: auto; max-width: 100%;">
+    <table style="width: 100%; table-layout: fixed; word-wrap: break-word; border-collapse: collapse;">
     <tr>
         <th>Time</th>
         <th>08:00 - 09:20</th>
@@ -129,6 +131,7 @@ const handleMediaQueryChange = function (e) {
         <th>02:40 - 04:00</th>
     </tr>
     <tr>
+        <th>Monday</th>
         <td><strong class="subject">C</strong></td>
         <td><strong class="subject">H</strong></td>
         <td><strong class="subject">U</strong></td>
@@ -147,7 +150,7 @@ const handleMediaQueryChange = function (e) {
     </tr>
     <tr>
         <th>Wednesday</th>
-        <td><strong class="subject>Final Year Project 3</strong><br>B-107</td>
+        <td><strong class="subject">Final Year Project III</strong><br>B-107</td>
         <td><strong class="subject">Wireless Communication</strong><br>B-202</td>
         <td></td>
         <td></td>
@@ -159,7 +162,7 @@ const handleMediaQueryChange = function (e) {
         <th>Thursday</th>
         <td></td>
         <td></td>
-        <td><strong class="subject"><strong>Software Engineering</strong><br>B-110</td>
+        <td><strong class="subject">Software Engineering</strong><br>B-110</td>
         <td><strong class="subject">Conternporary International Relations</strong><br>B-106</td>
         <td><strong class="subject">Conternporary International Relations</strong><br>B-105</td>
         <td><strong class="subject">Foreign Language French</strong><br>B-110</td>
@@ -173,7 +176,7 @@ const handleMediaQueryChange = function (e) {
         <td><strong class="subject">I</strong></td>
         <td><strong class="subject">E</strong></td>
     </tr>
-</table>`;
+</table><div>`;
   }
 };
 
