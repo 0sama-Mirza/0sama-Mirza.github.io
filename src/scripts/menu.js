@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             <section class="prayer-timing">
 					<h3 class="listhead" id="Salah-Time">Salah Timings</h3>
 					<!-- Drop Down Menu -->
+					<label for="countries">Select a country:</label>
 					<select name="countries" id="countries">
 						<option value="default" disabled selected>Loading Countries</option>
 					</select>
