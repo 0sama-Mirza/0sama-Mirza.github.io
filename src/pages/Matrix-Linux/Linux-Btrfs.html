@@ -63,7 +63,7 @@ Label: none  uuid: 10b5fb82-bfbf-4612-90cb-2fc374f2b46d
                     <br>However in reality <strong>220.04GiB</strong> storage is used. That is because this part
                     is the "Actual user data" + "Metadata" + "System data" + "Reserved space" so in total its more.
                     Inorder to see a more granular view of how space is allocated and used within the filesystem use
-                    the following command:
+                    the following command:</p>
 
                     <ul><li><code>sudo btrfs fi df mountpoint(can be just a simple "/"for root)</code></li></ul>
                     <p>It should give an output like so:</p>
@@ -74,7 +74,7 @@ System, DUP: total=32.00MiB, used=48.00KiB
 Metadata, DUP: total=5.00GiB, used=2.93GiB
 GlobalReserve, single: total=389.22MiB, used=0.00B</code></li></ul>
                     
-                    So to reclaim the space we need to do <strong>"Rebalancing"</strong>. We need to 
+                    <p>So to reclaim the space we need to do <strong>"Rebalancing"</strong>. We need to 
                     target <strong>data usage</strong> and <strong>metadata usage</strong> on BTRFS pool.
                     Just run these 2 commands:</p>
 
