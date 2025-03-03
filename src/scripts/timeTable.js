@@ -21,27 +21,27 @@ const handleMediaQueryChange = function (e) {
     <summary>Tuesday</summary>
     <div>
       <div class="time-row">
-        <p class="time">08:00 - 09:20</p>
+        <p class="time">07:45 - 08:45</p>
         <p class="subject">N/A</p>
       </div>
       <div class="time-row">
-        <p class="time">09:20 - 10:40</p>
+        <p class="time">08:45 - 09:45</p>
         <p class="subject">N/A</p>
       </div>
       <div class="time-row">
-        <p class="time">10:40 - 12:00</p>
+        <p class="time">09:45 - 10:45</p>
         <p class="subject"><strong>Wireless Communication</strong><br>B-202</p>
       </div>
       <div class="time-row">
-        <p class="time">12:00 - 01:20</p>
+        <p class="time">10:45 - 11:45</p>
         <p class="subject"><strong>Software Engineering</strong><br>B-106</p>
       </div>
       <div class="time-row">
-        <p class="time">01:20 - 02:40</p>
+        <p class="time">11:45 - 12:45</p>
         <p class="subject"><strong>Class Advisor</strong><br>B-108</p>
       </div>
       <div class="time-row">
-        <p class="time">02:40 - 04:00</p>
+        <p class="time">12:45 - 01:45</p>
         <p class="subject"><strong>Foreign Language French</strong><br>B-203</p>
       </div>
     </div>
@@ -51,27 +51,27 @@ const handleMediaQueryChange = function (e) {
     <summary>Wednesday</summary>
     <div>
       <div class="time-row">
-        <p class="time">08:00 - 09:20</p>
+        <p class="time">07:45 - 08:45</p>
         <p class="subject"><strong>Final Year Project 3</strong><br>B-107</p>
       </div>
       <div class="time-row">
-        <p class="time">09:20 - 10:40</p>
+        <p class="time">08:45 - 09:45</p>
         <p class="subject"><strong>Wireless Communication</strong><br>B-202</p>
       </div>
       <div class="time-row">
-        <p class="time">10:40 - 12:00</p>
+        <p class="time">09:45 - 10:45</p>
         <p class="subject">N/A</p>
       </div>
       <div class="time-row">
-        <p class="time">12:00 - 01:20</p>
+        <p class="time">10:45 - 11:45</p>
         <p class="subject">N/A</p>
       </div>
       <div class="time-row">
-        <p class="time">01:20 - 02:40</p>
+        <p class="time">11:45 - 12:45</p>
         <p class="subject"><strong>Engineering Management &amp Enterpreneurship</strong><br>B-106</p>
       </div>
       <div class="time-row">
-        <p class="time">02:40 - 04:00</p>
+        <p class="time">12:45 - 01:45</p>
         <p class="subject"><strong>Engineering Management &amp Enterpreneurship</strong><br>B-203</p>
       </div>
     </div>
@@ -81,27 +81,27 @@ const handleMediaQueryChange = function (e) {
     <summary>Thursday</summary>
     <div>
       <div class="time-row">
-        <p class="time">08:00 - 09:20</p>
+        <p class="time">07:45 - 08:45</p>
         <p class="subject">N/A</p>
       </div>
       <div class="time-row">
-        <p class="time">09:20 - 10:40</p>
+        <p class="time">08:45 - 09:45</p>
         <p class="subject">N/A</p>
       </div>
       <div class="time-row">
-        <p class="time">10:40 - 12:00</p>
+        <p class="time">09:45 - 10:45</p>
         <p class="subject"><strong>Software Engineering</strong><br>B-110</p>
       </div>
       <div class="time-row">
-        <p class="time">12:00 - 01:20</p>
+        <p class="time">10:45 - 11:45</p>
         <p class="subject"><strong>Conternporary International Relations</strong><br>B-106</p>
       </div>
       <div class="time-row">
-        <p class="time">01:20 - 02:40</p>
+        <p class="time">11:45 - 12:45</p>
         <p class="subject"><strong>Conternporary International Relations</strong><br>B-105</p>
       </div>
       <div class="time-row">
-        <p class="time">02:40 - 04:00</p>
+        <p class="time">12:45 - 01:45</p>
         <p class="subject"><strong>Foreign Language French</strong><br>B-110</p>
       </div>
     </div>
@@ -123,12 +123,12 @@ const handleMediaQueryChange = function (e) {
     <table style="width: 100%; table-layout: fixed; word-wrap: break-word; border-collapse: collapse;">
     <tr>
         <th>Time</th>
-        <th>08:00 - 09:20</th>
-        <th>09:20 - 10:40</th>
-        <th>10:40 - 12:00</th>
-        <th>12:00 - 01:20</th>
-        <th>01:20 - 02:40</th>
-        <th>02:40 - 04:00</th>
+        <th>07:45 - 08:45</th>
+        <th>08:45 - 09:45</th>
+        <th>09:45 - 10:45</th>
+        <th>10:45 - 11:45</th>
+        <th>11:45 - 12:45</th>
+        <th>12:45 - 01:45</th>
     </tr>
     <tr>
         <th>Monday</th>
