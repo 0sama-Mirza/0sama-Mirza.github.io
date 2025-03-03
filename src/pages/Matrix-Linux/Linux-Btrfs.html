@@ -62,16 +62,33 @@ Label: none  uuid: 10b5fb82-bfbf-4612-90cb-2fc374f2b46d
                     It means out of <strong>223.27GiB</strong> only <strong>178.25GiB</strong> of storage is used.
                     <br>However in reality <strong>220.04GiB</strong> storage is used. That is because this part
                     is the "Actual user data" + "Metadata" + "System data" + "Reserved space" so in total its more.
-                    So to reclaim the space we need to do <strong>"Rebalancing"</strong> Just run:</p>
+                    Inorder to see a more granular view of how space is allocated and used within the filesystem use
+                    the following command:
 
-                    <ul><li><code>sudo btrfs filesystem balance start -dusage=100 mountpoint(can be just a simple "/"for root)</code></li></ul>
+                    <ul><li><code>sudo btrfs fi df mountpoint(can be just a simple "/"for root)</code></li></ul>
+                    <p>It should give an output like so:</p>
+
+                    <ul style="list-style-type: none;"><li><code>
+Data, single: total=174.01GiB, used=172.79GiB
+System, DUP: total=32.00MiB, used=48.00KiB
+Metadata, DUP: total=5.00GiB, used=2.93GiB
+GlobalReserve, single: total=389.22MiB, used=0.00B</code></li></ul>
+                    
+                    So to reclaim the space we need to do <strong>"Rebalancing"</strong>. We need to 
+                    target <strong>data usage</strong> and <strong>metadata usage</strong> on BTRFS pool.
+                    Just run these 2 commands:</p>
+
+                    <ul>
+                        <li><code>sudo btrfs filesystem balance start -dusage=100 mountpoint(can be just a simple "/"for root)</code></li>
+                        <li>sudo btrfs balance start -musage=100 mountpoint(can be just a simple "/"for root)</li>
+                    </ul>
 
                     <p>In another terminal window type the following command to watch and moniter the process:</p>
 
                     <ul><li><code>watch sudo btrfs balance status mountpoint(same as before)</code></li></ul>
                     <p>Thats it! Run the 1st command again and see the size again.</p>
 
-                    <p><strong>Note:</strong> Change the "-dusage=" value to something else like 10, 20 etc.. If that result
+                    <p><strong>Note:</strong> Change the "-dusage=" and "-musage=" value to something else like 10, 20 etc.. If that result
                     isnt good then go up. Also read the <a style="color:rgb(0, 255, 0);" href ="https://btrfs.readthedocs.io/en/latest/Balance.html">official documentation!</a></p>
                     <div class="maintopics">
                         <h2 class="linuxboxitems">Troubleshooting</h2>
