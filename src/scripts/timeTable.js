@@ -34,7 +34,7 @@ const handleMediaQueryChange = function (e) {
       </div>
       <div class="time-row">
         <p class="time">10:45 - 11:45</p>
-        <p class="subject"><strong>Software Engineering</strong><br>B-106</p>
+        <p class="subject"><strong>Software Engineering</strong><br>B-108</p>
       </div>
       <div class="time-row">
         <p class="time">11:45 - 12:45</p>
@@ -94,7 +94,7 @@ const handleMediaQueryChange = function (e) {
       </div>
       <div class="time-row">
         <p class="time">10:45 - 11:45</p>
-        <p class="subject"><strong>Conternporary International Relations</strong><br>B-106</p>
+        <p class="subject"><strong>Conternporary International Relations</strong><br>B-108</p>
       </div>
       <div class="time-row">
         <p class="time">11:45 - 12:45</p>
@@ -144,8 +144,8 @@ const handleMediaQueryChange = function (e) {
         <td></td>
         <td></td>
         <td><strong class="subject">Wireless Communication</strong><br>B-202</td>
-        <td><strong class="subject">Software Engineering</strong><br>B-106</td>
-        <td><strong class="subject">Class Advisor</strong><br>B-106</td>
+        <td><strong class="subject">Software Engineering</strong><br>B-108</td>
+        <td><strong class="subject">Class Advisor</strong><br>B-108</td>
         <td><strong class="subject">Foreign Language French</strong><br>B-203</td>
     </tr>
     <tr>
@@ -163,7 +163,7 @@ const handleMediaQueryChange = function (e) {
         <td></td>
         <td></td>
         <td><strong class="subject">Software Engineering</strong><br>B-110</td>
-        <td><strong class="subject">Conternporary International Relations</strong><br>B-106</td>
+        <td><strong class="subject">Conternporary International Relations</strong><br>B-108</td>
         <td><strong class="subject">Conternporary International Relations</strong><br>B-105</td>
         <td><strong class="subject">Foreign Language French</strong><br>B-110</td>
     </tr>
