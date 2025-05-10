@@ -461,6 +461,19 @@
               <li style="color: white;">Recently Nvidia has added nvidia GSP firmware in the fallback image if using the kms hook. This filled the <strong>"/boot"</strong> partition for some people.
                To manage it please follow <a style="color:RGB(23, 147, 209)" href="inclusion of nvidia GSP firmware in the fallback image if using the kms hook.">this guide.</a></li>
               <li style="color: white;">Also <a style="color:RGB(23, 147, 209)" href="https://bbs.archlinux.org/viewtopic.php?id=226919">this</a> guide shows how to increase yout <strong>"/boot"</strong> partition.</li>
+              <li style="color: white;"> If you get the following error while compiling a program:<br>
+                <pre><code>/usr/include/linux/types.h:12:27: error: expected initializer before ‘__s128’
+                  typedef __signed__ __int128 __s128 __attribute__((aligned(16)));
+                                            ^~~~~~</code></pre><br>
+                Then follow <a style="color:RGB(23, 147, 209)" href="https://blog.csdn.net/FL1623863129/article/details/145346958">this</a> guide. Essentially all you need to do is the following:
+                <ol>
+                  <li><pre><code>sudo vim /usr/include/linux/types.h</code></pre></li>
+                  <li style="color: white;">At line <strong>"12"</strong> you will see the following line: <br>
+                  <pre><code>typedef __signed__ __int128 __s128 __attribute__((aligned(16)));</code></pre></li>
+                  <li style="color: white;">Just comment it out and compile.</li>
+                  <li style="color: white;">Remember! Be sure to uncomment the line after compilation as this is a system header file.</li>
+                </ol>
+              </li>
             </ul>
           </section>
         </div>
