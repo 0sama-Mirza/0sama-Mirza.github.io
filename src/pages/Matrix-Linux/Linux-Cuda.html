@@ -207,10 +207,13 @@
                     <li><strong>cuDNN Library for Linux (x86)</strong></li>
                   </ul>
                   <li>
-                    Follow the installation instructions on the page or extract
-                    and copy files manually to the CUDA installation
-                    directories.
+                    Follow the installation instructions on <a style="color: rgb(0, 255, 0);" href="https://blog.devgenius.io/a-comprehensive-guide-to-installing-cuda-cudnn-and-tensorrt-on-linux-4bc6bda7cdb6">this page</a>.
+                    When using Nvidia's way once you extract the file a folder called <strong style="color: white;">"cuda"</strong> will appear.
                   </li>
+                  <li>Inside it there will be 2 folders called <strong style="color: white;">"lib64"</strong> and <strong style="color: white;">"include"</strong></li>
+                  <li>The <a style="color: rgb(0, 255, 0);" href="https://blog.devgenius.io/a-comprehensive-guide-to-installing-cuda-cudnn-and-tensorrt-on-linux-4bc6bda7cdb6">guide</a> has this command <strong style="color: white;">"sudo cp -P cudnn-linux-x86_64–8.9.7.29_cuda12-archive/lib/libcudnn* /usr/local/cuda/lib64/"</strong></li>
+                  <li>This command for us is the same as <strong style="color: white;">"sudo cp -P path/where/you/extracted/cudnn/cuda/lib64/libcudnn* /usr/local/cuda/lib64/"</strong></li>
+                  <li>So its the same thing with different file names.</li>
                 </ol>
               </li>
             </ol>
