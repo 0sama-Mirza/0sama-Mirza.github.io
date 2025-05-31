@@ -253,7 +253,7 @@
             <p>
               Once everything is installed, reboot your system just because. Now
               using that virtual environment that you created use ChatGPT to
-              write a python program to test GPU and tensorflow-gpu. It SHOULD
+              write a python program to test GPU with tensorflow-gpu and pytorch. It SHOULD
               WORK!!!!!
             </p>
           </section>
@@ -266,10 +266,22 @@
             <ol>
               <li><div style="color: white">nvidia driver from arch package</div></li>
               <li><div style="color: white">CUDA 10.1 and cuDNN v8.0.5</div></li>
-              <li><div style="color: white">python 3.7</div></li>
-              <li><div style="color: white">pip install tensorflow-gpu==2.1.0</div></li>
-              <li><div style="color: white">pip install protobuf==3.20.*</div></li>
-              <li><div style="color: white">TensorRT 6</div></li>
+              <ol>
+                <li>For TensorFlow:</li>
+                <ul>
+                  <li><div style="color: white">python 3.7</div></li>
+                  <li><div style="color: white">pip install tensorflow-gpu==2.1.0</div></li>
+                  <li><div style="color: white">pip install protobuf==3.20.*</div></li>
+                  <li><div style="color: white">TensorRT 6</div></li>
+                </ul>
+              </ol>
+              <ol>
+                <li>For Pytorch:</li>
+                <ul>
+                  <li><div style="color: white">python 3.8</div></li>
+                  <li><div style="color: white">pip install torch==1.8.1+cu101 torchvision==0.9.1+cu101 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html</div></li>
+                </ul>
+              </ol>
               <li><div style="color: white">g++-8</div></li>
               <li><div style="color: white">Patching /usr/local/cuda/include/math_functions.h</div></li>
             </ol>
