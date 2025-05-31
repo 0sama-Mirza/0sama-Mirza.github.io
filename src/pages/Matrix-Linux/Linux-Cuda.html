@@ -4,23 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="../../../images/icons/favicon-H.ico"
-    />
+    <link rel="icon" type="image/x-icon" href="../../../images/icons/favicon-H.ico"/>
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
+      crossorigin="">
+    </script>
     <script src="../../scripts/namaz-timing.js" defer></script>
 
     <link rel="stylesheet" href="../../styles/Matrix-Style.css" />
@@ -35,16 +27,8 @@
       <header>
         <h1>0sama's Website!</h1>
         <div>
-          <img
-            src="../../../images/Backgrounds/GNU-vs.-GNULinux.png"
-            alt="GNU/Linux"
-            style="
-              width: 40%;
-              margin-bottom: -9%;
-              margin-left: 30%;
-              object-fit: fill;
-            "
-          />
+          <img src="../../../images/Backgrounds/GNU-vs.-GNULinux.png" alt="GNU/Linux"
+            style=" width: 40%; margin-bottom: -9%; margin-left: 30%; object-fit: fill;"/>
         </div>
       </header>
       <div class="flexposition">
@@ -56,10 +40,10 @@
           <div class="maintopics">
             <h2 class="linuxboxitems">CUDA and GTX 750 Ti</h2>
           </div>
-          <p>
+          <p> 
             FUCK THE COMPLECATED MESS THAT IS CUDA ESPECIALLY WHEN DEALING WITH
             OLDER GPU'S!!!!!!!! SO I WRITE THIS TO HELP MESELF NOT FORGET THESE
-            THINGS!!!
+            THINGS!!! 
           </p>
 
           <section class="Explain">
@@ -68,40 +52,17 @@
                 Step 1: Installing the NVIDIA Proprietary Drivers
               </h2>
             </div>
-            <p>
-              The first step is to install the
-              <strong>NVIDIA proprietary driver</strong>, which is required for
-              CUDA to function properly. For
-              <a
-                style="color: rgb(0, 255, 0)"
-                href="https://nouveau.freedesktop.org/CodeNames.html#NV110"
-                >Maxwell-based</a
-              >
-              GPUs like the GTX 750 Ti, use the
-              <span style="color: rgb(0, 255, 0)">nvidia</span> package:
+            <p> The first step is to install the <strong>NVIDIA proprietary driver</strong>, which is required for
+              CUDA to function properly. For <a style="color: rgb(0, 255, 0)" href="https://nouveau.freedesktop.org/CodeNames.html#NV110">Maxwell-based</a>
+              GPUs like the GTX 750 Ti, use the <span style="color: rgb(0, 255, 0)">nvidia</span> package:
             </p>
             <ul>
-              <li>
-                Go to the
-                <a
-                  style="color: rgb(0, 255, 0)"
-                  href="https://wiki.archlinux.org/title/NVIDIA"
-                  >Arch Wiki</a
-                >
+              <li>Go to the <a style="color: rgb(0, 255, 0)" href="https://wiki.archlinux.org/title/NVIDIA">Arch Wiki</a>
                 to follow the instructions for installing the correct drivers.
               </li>
-              <li>
-                Install the NVIDIA driver with
-                <code>sudo pacman -S nvidia</code>.
-              </li>
-              <li>
-                If you're using the LTS kernel, use
-                <code>sudo pacman -S nvidia-lts</code>.
-              </li>
-              <li>
-                For kernel compatibility, install
-                <code>sudo pacman -S nvidia-dkms</code>.
-              </li>
+              <li>Install the NVIDIA driver with: <code>sudo pacman -S nvidia</code></li>
+              <li>If you're using the LTS kernel, use: <code>sudo pacman -S nvidia-lts</code></li>
+              <li>For kernel compatibility, install: <code>sudo pacman -S nvidia-dkms</code></li>
             </ul>
           </section>
 
@@ -112,72 +73,39 @@
             <p>
               Once the drivers are installed, we can proceed with installing
               <strong>CUDA 10.1</strong>. CUDA 10.1 is the
-              <a
-                style="color: rgb(0, 255, 0)"
-                href="https://gist.github.com/standaloneSA/99788f30466516dbcc00338b36ad5acf"
-                >latest version</a
-              >
-              supported by the GTX 750 Ti which has Compute Capability of 5.0.
-              We need to install cuda and cuDNN. You have two main methods of
+              <a style="color: rgb(0, 255, 0)" href="https://gist.github.com/standaloneSA/99788f30466516dbcc00338b36ad5acf">latest version</a>
+              supported by the GTX 750 Ti which has Compute Capability of 5.0. We need to install cuda and cuDNN. You have two main methods of
               installation:
             </p>
             <ol>
-              <li>
-                <span class="textW">Install CUDA from the NVIDIA website.</span>
-              </li>
-              <li>
-                <span class="textW"
-                  >Install an older version of CUDA using Arch Linux
-                  Archive.</span
-                >
-              </li>
+              <li><span class="textW">Install CUDA from the NVIDIA website.</span></li>
+              <li><span class="textW">Install an older version of CUDA using Arch Linux Archive.</span></li>
             </ol>
 
             <h3>Method 1: Install CUDA from NVIDIA's Website</h3>
             <p>
               - Note: These steps are takken from
-              <a
-                style="color: rgb(0, 255, 0)"
-                href="https://bbs.archlinux.org/viewtopic.php?id=237141"
-                >Here!</a
-              >
+              <a style="color: rgb(0, 255, 0)" href="https://bbs.archlinux.org/viewtopic.php?id=237141">Here!</a>
             </p>
             <ol>
               <li>
                 <strong>Install CUDA:</strong>
                 <ol>
-                  <li>
-                    Go to the
-                    <a
-                      style="color: rgb(0, 255, 0)"
-                      href="https://developer.nvidia.com/cuda-toolkit-archive"
-                      >NVIDIA CUDA Downloads</a
-                    >
+                  <li>Go to the <a style="color: rgb(0, 255, 0)" href="https://developer.nvidia.com/cuda-toolkit-archive">NVIDIA CUDA Downloads</a>
                     page and select:
                   </li>
                   <ul>
                     <li><strong>Linux</strong></li>
                     <li><strong>x86_64</strong></li>
-                    <li>
-                      <strong>Ubuntu</strong> (choose the latest version) ->
-                      <strong>runfile (local)</strong>.
-                    </li>
+                    <li><strong>Ubuntu</strong> (choose the latest version) -&gt; <strong>runfile (local)</strong>.</li>
                   </ul>
-                  <li>
-                    Copy the provided <code>wget</code> command and execute it
-                    in the terminal:
-                  </li>
+                  <li>Copy the provided <code>wget</code> command and execute it in the terminal:</li>
                   <pre><code>wget https://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run</code></pre>
                   <li>Run the installer:</li>
                   <pre><code>chmod +x cuda_10.1.243_418.87.00_linux.run</code></pre>
                   <pre><code>sudo ./cuda_10.1.243_418.87.00_linux.run</code></pre>
-                  <li>
-                    Skip the driver installation since it’s already done via
-                    <code>pacman</code>.
-                  </li>
-                  <li>
-                    Set the environment paths in <strong>`~/.bashrc`</strong>:
-                  </li>
+                  <li>Skip the driver installation since it’s already done via <code>pacman</code>.</li>
+                  <li>Set the environment paths in <strong>`~/.bashrc`</strong>:</li>
                   <pre><code>export PATH=/usr/local/cuda-10.1/bin:$PATH</code></pre>
                   <pre><code>export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64:$LD_LIBRARY_PATH</code></pre>
                   <li>Reload <strong>`~/.bashrc`</strong>:</li>
@@ -189,62 +117,34 @@
                 <strong>Install cuDNN:</strong>
                 <ol>
                   <li>
-                    Go to the
-                    <a
-                      style="color: rgb(0, 255, 0)"
-                      href="https://developer.nvidia.com/rdp/cudnn-archive#a-collapse897-120"
-                      >NVIDIA cuDNN Downloads</a
-                    >
+                    Go to the <a style="color: rgb(0, 255, 0)" href="https://developer.nvidia.com/rdp/cudnn-archive#a-collapse897-120">NVIDIA cuDNN Downloads</a>
                     page and select:
                   </li>
                   <ul>
-                    <li>
-                      <strong
-                        >Download cuDNN v8.0.5 (November 9th, 2020), for CUDA
-                        10.1</strong
-                      >
-                    </li>
+                    <li><strong>Download cuDNN v8.0.5 (November 9th, 2020), for CUDA 10.1</strong></li>
                     <li><strong>cuDNN Library for Linux (x86)</strong></li>
                   </ul>
                   <li>
-                    Follow the installation instructions on <a style="color: rgb(0, 255, 0);" href="https://blog.devgenius.io/a-comprehensive-guide-to-installing-cuda-cudnn-and-tensorrt-on-linux-4bc6bda7cdb6">this page</a>.
+                    Follow the installation instructions on 
+                    <a style="color: rgb(0, 255, 0);" href="https://blog.devgenius.io/a-comprehensive-guide-to-installing-cuda-cudnn-and-tensorrt-on-linux-4bc6bda7cdb6">this page</a>.
                     When using Nvidia's way once you extract the file a folder called <strong style="color: white;">"cuda"</strong> will appear.
                   </li>
                   <li>Inside it there will be 2 folders called <strong style="color: white;">"lib64"</strong> and <strong style="color: white;">"include"</strong></li>
-                  <li>The <a style="color: rgb(0, 255, 0);" href="https://blog.devgenius.io/a-comprehensive-guide-to-installing-cuda-cudnn-and-tensorrt-on-linux-4bc6bda7cdb6">guide</a> has this command <strong style="color: white;">"sudo cp -P cudnn-linux-x86_64–8.9.7.29_cuda12-archive/lib/libcudnn* /usr/local/cuda/lib64/"</strong></li>
-                  <li>This command for us is the same as <strong style="color: white;">"sudo cp -P path/where/you/extracted/cudnn/cuda/lib64/libcudnn* /usr/local/cuda/lib64/"</strong></li>
+                  <li>The <a style="color: rgb(0, 255, 0);" href="https://blog.devgenius.io/a-comprehensive-guide-to-installing-cuda-cudnn-and-tensorrt-on-linux-4bc6bda7cdb6">guide</a>
+                     has this command <br><strong style="color: white;">"sudo cp -P cudnn-linux-x86_64–8.9.7.29_cuda12-archive/lib/libcudnn* /usr/local/cuda/lib64/"</strong>
+                  </li>
+                  <li>This command for us is the same as <br><strong style="color: white;">"sudo cp -P path/where/you/extracted/cudnn/cuda/lib64/libcudnn* /usr/local/cuda/lib64/"</strong></li>
                   <li>So its the same thing with different file names.</li>
                 </ol>
               </li>
             </ol>
             <h3>Method 2: Install CUDA via Arch Linux Archive</h3>
-            <p>
-              - These steps are taken from this
-              <a
-                style="color: rgb(0, 255, 0)"
-                href="https://superuser.com/questions/1784504/how-do-i-get-cuda-11-7-on-arch-linux"
-                >Here.</a
-              >
-            </p>
+            <p>- These steps are taken from this <a style="color: rgb(0, 255, 0)" href="https://superuser.com/questions/1784504/how-do-i-get-cuda-11-7-on-arch-linux">Here.</a></p>
             <ol>
-              <li>
-                Download the required CUDA packages from the Arch Linux Archive:
-              </li>
+              <li>Download the required CUDA packages from the Arch Linux Archive:</li>
               <ol>
-                <li>
-                  <a
-                    style="color: rgb(0, 255, 0)"
-                    href="https://archive.archlinux.org/packages/c/cuda/"
-                    >Select cuda-10.1.243-2-x86_64.pkg.tar.xz</a
-                  >
-                </li>
-                <li>
-                  <a
-                    style="color: rgb(0, 255, 0)"
-                    href="https://archive.archlinux.org/packages/c/cudnn/"
-                    >Select cudnn-8.0.5.39-1-x86_64.pkg.tar.zst</a
-                  >
-                </li>
+                <li><a style="color: rgb(0, 255, 0)" href="https://archive.archlinux.org/packages/c/cuda/">Select cuda-10.1.243-2-x86_64.pkg.tar.xz</a></li>
+                <li><a style="color: rgb(0, 255, 0)" href="https://archive.archlinux.org/packages/c/cudnn/">Select cudnn-8.0.5.39-1-x86_64.pkg.tar.zst</a></li>
               </ol>
               <pre><code>sudo pacman -U https://archive.archlinux.org/packages/c/cuda/cuda-10.1.243-1-x86_64.pkg.tar.xz</code></pre>
               <pre><code>sudo pacman -U https://archive.archlinux.org/packages/c/cudnn/cudnn-8.0.5-1-x86_64.pkg.tar.xz</code></pre>
@@ -253,37 +153,20 @@
 
           <section class="Explain">
             <div class="maintopics">
-              <h2 class="linuxboxitems">
-                Step 3: Install Python 3.7 for TensorFlow
-              </h2>
+              <h2 class="linuxboxitems">Step 3: Install Python 3.7 for TensorFlow</h2>
             </div>
             <p>
-              TensorFlow 2.1.0 is compatible with CUDA 10.1, but it
-              <a
-                style="color: rgb(0, 255, 0)"
-                href="https://pypi.org/project/tensorflow-gpu/2.1.0/"
-                >requires</a
-              >
+              TensorFlow 2.1.0 is compatible with CUDA 10.1, but it <a style="color: rgb(0, 255, 0)" href="https://pypi.org/project/tensorflow-gpu/2.1.0/">requires</a>
               Python 3.7. To install Python 3.7 on Arch Linux:
             </p>
             <ul>
-              <li>
-                Install Python 3.7 from the
-                <a
-                  style="color: rgb(0, 255, 0)"
-                  href="https://aur.archlinux.org/packages/python37"
-                  >AUR:</a
-                >
-                <code>yay -S python37</code>
-              </li>
+              <li> Install Python 3.7 from the <a style="color: rgb(0, 255, 0)" href="https://aur.archlinux.org/packages/python37">AUR:</a><br><code>yay -S python37</code></li>
               <li>Create a virtual environment:</li>
               <pre><code>python3.7 -m venv tf_env</code></pre>
               <pre><code>source tf_env/bin/activate</code></pre>
               <li>Install TensorFlow GPU 2.1.0:</li>
               <pre><code>pip install tensorflow-gpu==2.1.0</code></pre>
-              <li>
-                Also, install the required version of <strong>protobuf</strong>:
-              </li>
+              <li>Also, install the required version of <strong>protobuf</strong>:</li>
               <pre><code>pip uninstall protobuf</code></pre>
               <pre><code>pip install protobuf==3.20.*</code></pre>
               <li>Lastly if your importing a model like .pt file you need h5py version 2.10.0 otherwise it will give a core._numpy error or something like that.</li>
@@ -293,123 +176,79 @@
 
           <section class="Explain">
             <div class="maintopics">
-              <h2 class="linuxboxitems">
-                Step 4: Install TensorRT for Deep Learning Inference.
-              </h2>
+              <h2 class="linuxboxitems">Step 4: Install TensorRT for Deep Learning Inference.</h2>
             </div>
             <p>
               - These steps are taken from this
-              <a
-                style="color: rgb(0, 255, 0)"
-                href="https://blog.devgenius.io/a-comprehensive-guide-to-installing-cuda-cudnn-and-tensorrt-on-linux-4bc6bda7cdb6"
-                >blog guide.</a
-              >
+              <a style="color: rgb(0, 255, 0)" href="https://blog.devgenius.io/a-comprehensive-guide-to-installing-cuda-cudnn-and-tensorrt-on-linux-4bc6bda7cdb6">blog guide.</a>
             </p>
             <p>
-              - TensorRT 6 is
-              <a
-                style="color: rgb(0, 255, 0)"
-                href="https://docs.nvidia.com/deeplearning/tensorrt/archives/tensorrt-910/release-notes/index.html#rel_6-0-1"
-                >required </a
-              >for deep learning inference on CUDA 10.1. To install it:
+              - TensorRT 6 is <a style="color: rgb(0, 255, 0)" href="https://docs.nvidia.com/deeplearning/tensorrt/archives/tensorrt-910/release-notes/index.html#rel_6-0-1">required </a>
+                for deep learning inference on CUDA 10.1. To install it:
             </p>
             <ol>
-              <li>
-                Go to the
-                <a
-                  style="color: rgb(0, 255, 0)"
-                  href="https://developer.nvidia.com/tensorrt/download"
-                  >TensorRT download page.</a
-                >
-              </li>
-              <li>
-                Select <strong>"TensorRT 6"</strong> and fill out the stupid
-                survey.
-              </li>
-              <li>
-                Download the latest Ubuntu (NOT .deb the tar one) package from
-                cuda 10.1.
-              </li>
+              <li>Go to the <a style="color: rgb(0, 255, 0)" href="https://developer.nvidia.com/tensorrt/download">TensorRT download page.</a></li>
+              <li>Select <strong>"TensorRT 6"</strong> and fill out the stupid survey.</li>
+              <li>Download the latest Ubuntu (NOT .deb the tar one) package from cuda 10.1.</li>
               <li>Then do the following:</li>
               <ol>
                 <pre><code>tar -xvf TensorRT-6.0.1.5.Ubuntu-18.04.x86_64-gnu.cuda-10.1.cudnn7.6.tar.gz</code></pre>
                 <pre><code>cp -r TensorRT-6.0.1.5.Ubuntu-18.04.x86_64-gnu.cuda-10.1.cudnn7.6/TensorRT-6.0.1.5 ~</code></pre>
               </ol>
-              <li>
-                Then go to your home dir and open
-                <strong
-                  >"TensorRT-6.0.1.5/doc/pdf/TensorRT-Installation-Guide.pdf"</strong
-                >
-              </li>
-              <li>
-                Follow the <strong>tar installation</strong> also consult the
-                blog guide as well.
-              </li>
+              <li>Then go to your home dir and open <strong>"TensorRT-6.0.1.5/doc/pdf/TensorRT-Installation-Guide.pdf"</strong></li>
+              <li>Follow the <strong>tar installation</strong> also consult the blog guide as well.</li>
             </ol>
           </section>
 
           <section class="Explain">
             <div class="maintopics">
-              <h2 class="linuxboxitems">
-                Step 5: Install g++-8 for CUDA Compilation
-              </h2>
+              <h2 class="linuxboxitems">Step 5: Install Python 3.8 for Pytorch</h2>
             </div>
             <p>
-              To compile CUDA programs, you need <strong>g++-8</strong>, as
-              newer versions may not be compatible with CUDA 10.1:
+              Pytorch 1.8.1 is compatible with CUDA 10.1. Go to <a style="color: rgb(0, 255, 0)" href="https://pytorch.org/get-started/previous-versions/">this page</a>
+              and Ctrl+F search <strong>"cuda 10.1"</strong>. The latest Python version for it is <strong>"Python 3.8"</strong>. To install Python 3.8 on Arch Linux:
             </p>
             <ul>
-              <li>
-                Install
-                <strong
-                  ><a
-                    style="color: rgb(0, 255, 0)"
-                    href="https://wiki.archlinux.org/title/GNU_Compiler_Collection"
-                    >g++-8:</a
-                  ></strong
-                >
-                <code> yay -S g++-8</code>
-              </li>
+              <li> Install Python 3.8 from the <a style="color: rgb(0, 255, 0)" href="https://aur.archlinux.org/packages/python38">AUR:</a><br><code>yay -S python38</code></li>
+              <li>Create a virtual environment:</li>
+              <pre><code>python3.8 -m venv pytorch_env</code></pre>
+              <pre><code>source pytorch_env/bin/activate</code></pre>
+              <li>Install Pytorch GPU:</li>
+              <pre><code>pip install torch==1.8.1+cu101 torchvision==0.9.1+cu101 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html</code></pre>
+            </ul>
+            <p>Thats it!! Thank you Pytorch for simply showing what we need in a nice table form. Fuck TensorFlow!!!</p>
+          </section>
+
+          <section class="Explain">
+            <div class="maintopics">
+              <h2 class="linuxboxitems">Step 6: Install g++-8 for CUDA Compilation</h2>
+            </div>
+            <p>To compile CUDA programs, you need <strong>g++-8</strong>, as newer versions may not be compatible with CUDA 10.1:</p>
+            <ul>
+              <li>Install <strong><a style="color: rgb(0, 255, 0)" href="https://wiki.archlinux.org/title/GNU_Compiler_Collection">g++-8:</a></strong><br><code> yay -S g++-8</code></li>
             </ul>
           </section>
 
           <section class="Explain">
             <div class="maintopics">
-              <h2 class="linuxboxitems">
-                Step 6: Patch the "math_functions.h" File
-              </h2>
+              <h2 class="linuxboxitems">Step 7: Patch the "math_functions.h" File</h2>
             </div>
             <p>
-              Recently a
-              <a
-                style="color: rgb(0, 255, 0)"
-                href="https://github.com/opencv/opencv/issues/27111"
-                >bug</a
-              >
-              in nvidia's <strong>"math_functions.h"</strong> made it
+              Recently a <a style="color: rgb(0, 255, 0)" href="https://github.com/opencv/opencv/issues/27111">bug</a> in nvidia's <strong>"math_functions.h"</strong> made it
               impossible to compile cuda programs.
             </p>
             <ul>
               <li>
-                Navigate to
-                <strong style="color: white"
-                  >"/usr/local/cuda/include/math_functions.h"</strong
-                >
+                Navigate to <strong style="color: white">"/usr/local/cuda/include/math_functions.h"</strong>
                 and follow the patch instructions provided here:
-                <a
-                  style="color: rgb(0, 255, 0)"
-                  href="https://forums.developer.nvidia.com/t/error-exception-specification-is-incompatible-for-cospi-sinpi-cospif-sinpif-with-glibc-2-41/323591/3"
-                  >NVIDIA forum thread</a
-                >.
+                <a style="color: rgb(0, 255, 0)" href="https://forums.developer.nvidia.com/t/error-exception-specification-is-incompatible-for-cospi-sinpi-cospif-sinpif-with-glibc-2-41/323591/3">NVIDIA forum thread</a>.
               </li>
             </ul>
           </section>
 
           <section>
             <div class="maintopics">
-              <h2 class="linuxboxitems">
-                Step 7: Reboot and Verify Installation
-              </h2>
+              <h2 class="linuxboxitems">Step 8: Reboot and Verify Installation</h2>
             </div>
             <p>
               Once everything is installed, reboot your system just because. Now
@@ -425,43 +264,38 @@
             </div>
             <p>These are the things we did:</p>
             <ol>
-              <li>
-                <div style="color: white">nvidia driver from arch package</div>
-              </li>
-              <li>
-                <div style="color: white">CUDA 10.1 and cuDNN v8.0.5</div>
-              </li>
+              <li><div style="color: white">nvidia driver from arch package</div></li>
+              <li><div style="color: white">CUDA 10.1 and cuDNN v8.0.5</div></li>
               <li><div style="color: white">python 3.7</div></li>
-              <li>
-                <div style="color: white">
-                  pip install tensorflow-gpu==2.1.0
-                </div>
-              </li>
-              <li>
-                <div style="color: white">pip install protobuf==3.20.*</div>
-              </li>
+              <li><div style="color: white">pip install tensorflow-gpu==2.1.0</div></li>
+              <li><div style="color: white">pip install protobuf==3.20.*</div></li>
               <li><div style="color: white">TensorRT 6</div></li>
               <li><div style="color: white">g++-8</div></li>
-              <li>
-                <div style="color: white">
-                  Patching /usr/local/cuda/include/math_functions.h
-                </div>
-              </li>
+              <li><div style="color: white">Patching /usr/local/cuda/include/math_functions.h</div></li>
             </ol>
           </section>
           <section>
             <div class="maintopics">
               <h2 class="linuxboxitems">Additional Notes:</h2>
             </div>
-            <p>I made a bash script for compiling and running cuda and mpi programs. You can use it to 
-            test your own programs. Additionally you should get a folder in home dir called <strong>"NVIDIA_CUDA-10.1_Samples"</strong>
-            After Cuda 10 all <a style="color: yellowgreen;" href="https://docs.nvidia.com/cuda/cuda-samples/index.html">NVIDIA_CUDA_Samples</a> are in their <a style="color: yellow;" href="https://github.com/nvidia/cuda-samples">github.</a></p>
+            <p>
+              I made a bash script for compiling and running cuda and mpi programs. You can use it to 
+              test your own programs. Additionally you should get a folder in home dir called <strong>"NVIDIA_CUDA-10.1_Samples"</strong>
+              After Cuda 10 all <a style="color: yellowgreen;" href="https://docs.nvidia.com/cuda/cuda-samples/index.html">NVIDIA_CUDA_Samples</a> are in their 
+              <a style="color: yellow;" href="https://github.com/nvidia/cuda-samples">github.</a>
+            </p>
             <ul>
               <li><a style="color: rgb(0, 255, 0);" href="https://github.com/0sama-Mirza/Cuda-Helping-Scripts">My Bash Scripts</a></li>
-              <li style="color: white">While testing <strong>"NVIDIA_CUDA-10.1_Samples"</strong> make sure in Makefile to include g++-8 and gcc-8 as they assume your system by default has it. Also check out <a style="color: RGB(168, 29, 51);" href="https://bbs.archlinux.org/viewtopic.php?id=180833">this</a> post.</li>
-              <li style="color: white">If you didnt see <strong>"NVIDIA_CUDA-10.1_Samples"</strong> then follow <a style="color: rgb(0, 255, 0);" href="https://www.geeksforgeeks.org/installing-cudnn-on-linux/">this</a> guide and see <strong>"Verification and Testing Procedures"</strong> part.</li>
+              <li style="color: white">While testing <strong>"NVIDIA_CUDA-10.1_Samples"</strong> make sure in Makefile to include g++-8 and gcc-8 as they assume your system by default has it. Also check out 
+                <a style="color: RGB(168, 29, 51);" href="https://bbs.archlinux.org/viewtopic.php?id=180833">this</a> post.
+              </li>
+              <li style="color: white">
+                If you didnt see <strong>"NVIDIA_CUDA-10.1_Samples"</strong> then follow <a style="color: rgb(0, 255, 0);" href="https://www.geeksforgeeks.org/installing-cudnn-on-linux/">this</a> 
+                guide and see <strong>"Verification and Testing Procedures"</strong> part.
+              </li>
               <li style="color: white;">Recently Nvidia has added nvidia GSP firmware in the fallback image if using the kms hook. This filled the <strong>"/boot"</strong> partition for some people.
-               To manage it please follow <a style="color:RGB(23, 147, 209)" href="https://bbs.archlinux.org/viewtopic.php?id=293333">this guide.</a></li>
+               To manage it please follow <a style="color:RGB(23, 147, 209)" href="https://bbs.archlinux.org/viewtopic.php?id=293333">this guide.</a>
+              </li>
               <li style="color: white;">Also <a style="color:RGB(23, 147, 209)" href="https://bbs.archlinux.org/viewtopic.php?id=226919">this</a> guide shows how to increase your <strong>"/boot"</strong> partition.</li>
               <li style="color: white;"> If you get the following error while compiling a program:<br>
                 <pre><code>/usr/include/linux/types.h:12:27: error: expected initializer before ‘__s128’
