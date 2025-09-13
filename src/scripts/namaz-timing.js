@@ -168,7 +168,7 @@ document.addEventListener("menuLoaded", function () {
           showNamazTiming();
         }
       } else {
-        countriesData = await getJSON("https://restcountries.com/v3.1/all?fields=name,flag");
+        countriesData = await getJSON("https://restcountries.com/v3.1/all?fields=name,flag,latlng");
         localStorage.setItem(storageKey, JSON.stringify(countriesData));
       }
       let outputCountries =
