@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                 </nav>
             </section>
             <section class="prayer-timing">
-					<h3 class="listhead" id="Salah-Time">Salah Timings</h3>
+					<h3 class="listhead_no_italic" id="Salah-Time">Salah Timings</h3>
 					<!-- Drop Down Menu -->
 					<select name="countries" id="countries" aria-label="Select a country">
 						<option value="default" disabled selected>Loading Countries</option>
