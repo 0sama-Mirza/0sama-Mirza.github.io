@@ -1,5 +1,4 @@
-"use strick";
-
+"use strict";
 document.addEventListener("menuLoaded", function () {
   const countries = document.getElementById("countries");
   const closeMapButton = document.getElementById("closeMapButton");
