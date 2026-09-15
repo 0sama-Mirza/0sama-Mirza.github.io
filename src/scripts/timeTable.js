@@ -6,26 +6,19 @@ const mediaQuery = window.matchMedia("(max-width: 555px)");
 
 const handleMediaQueryChange = function (e) {
   if (e.matches) {
+    // Mobile Layout (Accordion)
     timeTable.innerHTML = `
 <div class="accordion">
   <details>
     <summary>Monday</summary>
     <div>
       <div class="time-row">
-        <p class="time">09:00 - 10:45</p>
-        <p class="subject"><strong>Analog IC Lecture</strong><br>B-227</p>
+        <p class="time">09:00 - 05:00</p>
+        <p class="subject"><strong><a href="https://www.youtube.com/watch?v=_IrQHeDcMi8" target="_blank" rel="noopener noreferrer">WORK</a></strong></p>
       </div>
       <div class="time-row">
-        <p class="time">11:00 - 12:45</p>
-        <p class="subject"><strong>RTL Lecture</strong><br>B-227</p>
-      </div>
-      <div class="time-row">
-        <p class="time">01:00 - 2:00</p>
-        <p class="subject"><strong>Break</strong></p>
-      </div>
-      <div class="time-row">
-        <p class="time">2:00 - 05:00</p>
-        <p class="subject"><strong>Analog IC Lab</strong><br>IDK</p>
+        <p class="time">05:00 onwards</p>
+        <p class="subject"><strong>Free</strong></p>
       </div>
     </div>
   </details>
@@ -34,20 +27,12 @@ const handleMediaQueryChange = function (e) {
     <summary>Tuesday</summary>
     <div>
       <div class="time-row">
-        <p class="time">09:00 - 10:45</p>
-        <p class="subject"><strong>Digital IC Lecture</strong><br>B-227</p>
+        <p class="time">09:00 - 05:00</p>
+        <p class="subject"><strong><a href="https://www.youtube.com/watch?v=_IrQHeDcMi8" target="_blank" rel="noopener noreferrer">WORK</a></strong></p>
       </div>
       <div class="time-row">
-        <p class="time">11:00 - 12:00</p>
-        <p class="subject"><strong>Soft Skills (1 Hour)</strong><br>B-227</p>
-      </div>
-      <div class="time-row">
-        <p class="time">12:00 - 02:00</p>
-        <p class="subject"><strong>Break</strong></p>
-      </div>
-      <div class="time-row">
-        <p class="time">2:00 - 03:30</p>
-        <p class="subject"><strong>Analog IC Makeup</strong><br>B-227</p>
+        <p class="time">05:15 - 07:00</p>
+        <p class="subject"><strong>Holy Quran Class</strong><br>B-20</p>
       </div>
     </div>
   </details>
@@ -56,20 +41,12 @@ const handleMediaQueryChange = function (e) {
     <summary>Wednesday</summary>
     <div>
       <div class="time-row">
-        <p class="time">09:00 - 10:45</p>
-        <p class="subject"><strong>Analog IC Lecture</strong><br>B-227</p>
+        <p class="time">09:00 - 05:00</p>
+        <p class="subject"><strong><a href="https://www.youtube.com/watch?v=_IrQHeDcMi8" target="_blank" rel="noopener noreferrer">WORK</a></strong></p>
       </div>
       <div class="time-row">
-        <p class="time">11:00 - 12:45</p>
-        <p class="subject"><strong>RTL Lecture</strong><br>B-227</p>
-      </div>
-      <div class="time-row">
-        <p class="time">01:00 - 02:00</p>
-        <p class="subject">Break</p>
-      </div>
-      <div class="time-row">
-        <p class="time">02:00 - 05:00</p>
-        <p class="subject"><strong>Digital IC laboratory</strong><br>IDK</p>
+        <p class="time">05:15 - 08:00</p>
+        <p class="subject"><strong>Embedded Systems</strong><br>B-19</p>
       </div>
     </div>
   </details>
@@ -78,16 +55,12 @@ const handleMediaQueryChange = function (e) {
     <summary>Thursday</summary>
     <div>
       <div class="time-row">
-        <p class="time">09:00 - 12:45</p>
-        <p class="subject"><strong>Research Methodology Lecture</strong><br>B-227</p>
+        <p class="time">09:00 - 05:00</p>
+        <p class="subject"><strong><a href="https://www.youtube.com/watch?v=_IrQHeDcMi8" target="_blank" rel="noopener noreferrer">WORK</a></strong></p>
       </div>
       <div class="time-row">
-        <p class="time">01:00 - 02:00</p>
-        <p class="subject">Break</p>
-      </div>
-      <div class="time-row">
-        <p class="time">02:00 - 03:30</p>
-        <p class="subject"><strong>Digital IC Makeup</strong><br>B-227</p>
+        <p class="time">05:00 onwards</p>
+        <p class="subject"><strong>Free</strong></p>
       </div>
     </div>
   </details>
@@ -96,75 +69,62 @@ const handleMediaQueryChange = function (e) {
     <summary>Friday</summary>
     <div>
       <div class="time-row">
-        <p class="time">09:00 - 10:45</p>
-        <p class="subject"><strong>Digital IC Lecture</strong><br>B-227</p>
+        <p class="time">09:00 - 02:00</p>
+        <p class="subject"><strong><a href="https://www.youtube.com/watch?v=_IrQHeDcMi8" target="_blank" rel="noopener noreferrer">WORK</a></strong></p>
       </div>
       <div class="time-row">
-        <p class="time">11:00 - 12:45</p>
-        <p class="subject"><strong>RTL Makeup</strong><br>B-227</p>
+        <p class="time">02:00 - 06:00</p>
+        <p class="subject"><strong>RFIC Theory Class</strong><br>B-127</p>
       </div>
       <div class="time-row">
-        <p class="time">01:00 - 02:00</p>
-        <p class="subject">Break</p>
+        <p class="time">06:00 - 08:00</p>
+        <p class="subject"><strong>RFIC Lab</strong><br>GF-METRC Lab</p>
       </div>
-      <div class="time-row">
-        <p class="time">02:00 - 05:00</p>
-        <p class="subject"><strong>RTL Laboratory</strong><br>IDK</p>
-      </div>
-    </div>
     </div>
   </details>
 </div>
     `;
   } else {
+    // Desktop Layout (Table)
     timeTable.innerHTML = `
     <div style="overflow-x: auto; max-width: 100%;">
     <table style="width: 100%; table-layout: fixed; word-wrap: break-word; border-collapse: collapse;">
     <tr>
         <th>Time</th>
-        <th>09:00 - 10:45</th>
-        <th>11:00 - 12:45</th>
-        <th>01:00 - 02:00</th>
-        <th>02:00 - 03:30</th>
-        <th>03:30 - 05:00</th>
+        <th>09:00 - 02:00</th>
+        <th>02:00 - 05:00</th>
+        <th>05:15 - 06:00</th>
+        <th>06:00 - 07:00</th>
+        <th>07:00 - 08:00</th>
     </tr>
     <tr>
         <th>Monday</th>
-        <td colspan="1" data-label="09:00 - 10:45"><strong class="subject">Analog IC Lecture</strong><br>B-227</td>
-        <td colspan="1" data-label="11:00 - 12:45"><strong class="subject">RTL Lecture</strong><br>B-227</td>
-        <td colspan="1" data-label="01:00 - 02:00"></td>
-        <td colspan="2" data-label="02:00 - 05:00"><strong class="subject">Analog IC laboratory</strong><br>IDK</td>
+        <td colspan="2" data-label="09:00 - 05:00"><strong class="subject"><a href="https://www.youtube.com/watch?v=_IrQHeDcMi8" target="_blank" rel="noopener noreferrer">WORK</a></strong></td>
+        <td colspan="3" data-label="05:15 - 08:00">Free</td>
     </tr>
     <tr>
         <th>Tuesday</th>
-        <td colspan="1" data-label="09:00 - 10:45"><strong class="subject">Digital IC Lecture</strong><br>B-227</td>
-        <td colspan="1" data-label="11:00 - 12:45"><strong class="subject">Soft Skills (1 Hour)</strong><br>B-227</td>
-        <td colspan="1" data-label="01:00 - 02:00"></td>
-        <td colspan="1" data-label="02:00 - 03:30"><strong class="subject">Analog IC Makeup</strong><br>B-227</td>
-        <td colspan="1" data-label="03:30 - 05:00"></td>
+        <td colspan="2" data-label="09:00 - 05:00"><strong class="subject"><a href="https://www.youtube.com/watch?v=_IrQHeDcMi8" target="_blank" rel="noopener noreferrer">WORK</a></strong></td>
+        <td colspan="2" data-label="05:15 - 07:00"><strong class="subject">Holy Quran Class</strong><br>B-20</td>
+        <td colspan="1" data-label="07:00 - 08:00">Free</td>
     </tr>
     <tr>
         <th>Wednesday</th>
-        <td colspan="1" data-label="09:00 - 10:45"><strong class="subject">Analog IC Lecture</strong><br>B-227</td>
-        <td colspan="1" data-label="11:00 - 12:45"><strong class="subject">RTL Lecture</strong><br>B-227</td>
-        <td colspan="1" data-label="01:00 - 02:00"></td>
-        <td colspan="2" data-label="02:00 - 05:00"><strong class="subject">Digital IC laboratory</strong><br>IDK</td>
+        <td colspan="2" data-label="09:00 - 05:00"><strong class="subject"><a href="https://www.youtube.com/watch?v=_IrQHeDcMi8" target="_blank" rel="noopener noreferrer">WORK</a></strong></td>
+        <td colspan="3" data-label="05:15 - 08:00"><strong class="subject">Embedded Systems</strong><br>B-19</td>
     </tr>
     <tr>
         <th>Thursday</th>
-        <td colspan="2" data-label="09:00 - 12:45"><strong class="subject">Research Methodology Lecture</strong><br>B-227</td>
-        <td colspan="1" data-label="01:00 - 02:00"></td>
-        <td colspan="1" data-label="02:00 - 03:30"><strong class="subject">Digital IC Makeup</strong><br>IDK</td>
-        <td colspan="1" data-label="03:30 - 05:00"></td>
+        <td colspan="2" data-label="09:00 - 05:00"><strong class="subject"><a href="https://www.youtube.com/watch?v=_IrQHeDcMi8" target="_blank" rel="noopener noreferrer">WORK</a></strong></td>
+        <td colspan="3" data-label="05:15 - 08:00">Free</td>
     </tr>
     <tr>
         <th>Friday</th>
-        <td colspan="1" data-label="09:00 - 10:45"><strong class="subject">Digital IC Lecture</strong><br>B-227</td>
-        <td colspan="1" data-label="11:00 - 12:45"><strong class="subject">RTL Makeup</strong><br>B-227</td>
-        <td colspan="1" data-label="01:00 - 02:00"></td>
-        <td colspan="2" data-label="02:00 - 05:00"><strong class="subject">RTL Laboratory</strong><br>IDK</td>
+        <td colspan="1" data-label="09:00 - 02:00"><strong class="subject"><a href="https://www.youtube.com/watch?v=_IrQHeDcMi8" target="_blank" rel="noopener noreferrer">WORK</a></strong></td>
+        <td colspan="2" data-label="02:00 - 06:00"><strong class="subject">RFIC Theory Class</strong><br>B-127</td>
+        <td colspan="2" data-label="06:00 - 08:00"><strong class="subject">RFIC Lab</strong><br>GF-METRC Lab</td>
     </tr>
-</table><div>`;
+</table></div>`;
   }
 };
 
