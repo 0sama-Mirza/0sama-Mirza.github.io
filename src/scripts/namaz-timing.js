@@ -167,7 +167,7 @@ document.addEventListener("menuLoaded", function () {
           showNamazTiming();
         }
       } else {
-        countriesData = await getJSON("https://restcountries.com/v3.1/all?fields=name,flag,latlng,altSpellings");
+        countriesData = await getJSON("/countries.json");
         localStorage.setItem(storageKey, JSON.stringify(countriesData));
       }
       let outputCountries =
@@ -187,11 +187,10 @@ document.addEventListener("menuLoaded", function () {
           '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(map);
       map.on("click", (mapE) => {
-        mapEvent = mapE;
         if (currentMarker) {
           map.removeLayer(currentMarker);
         }
-        currentMarker = L.marker(mapEvent.latlng)
+        currentMarker = L.marker(mapE.latlng)
           .addTo(map)
           .bindPopup(
             L.popup({
